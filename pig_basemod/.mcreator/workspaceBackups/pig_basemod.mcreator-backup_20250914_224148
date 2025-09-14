@@ -52,20 +52,6 @@
         ]
       },
       "path": "~/Other/LootTables"
-    },
-    {
-      "name": "Indusium",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "indusium",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/pigbasemod/item/IndusiumItem.java",
-          "src/main/resources/assets/pig_basemod/models/item/indusium.json"
-        ]
-      },
-      "path": "~/Resources"
     }
   ],
   "variable_elements": [],
@@ -101,7 +87,6 @@
     "en_us": {
       "subtitles.minionhurt": "",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
-      "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "subtitles.minionambient": "",
