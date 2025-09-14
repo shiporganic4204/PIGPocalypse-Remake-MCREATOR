@@ -1,0 +1,26 @@
+{
+  "minionambient": {
+    "sounds": [
+      {
+        "name": "pig_basemod:minionambient",
+        "stream": false
+      }
+    ]
+  },
+  "miniondie": {
+    "sounds": [
+      {
+        "name": "pig_basemod:miniondie",
+        "stream": false
+      }
+    ]
+  },
+  "minionhurt": {
+    "sounds": [
+      {
+        "name": "pig_basemod:minionhurt",
+        "stream": false
+      }
+    ]
+  }
+}
