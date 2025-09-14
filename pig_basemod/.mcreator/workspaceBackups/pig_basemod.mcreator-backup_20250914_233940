@@ -11,7 +11,8 @@
           "src/main/resources/assets/pig_basemod/models/item/green_porkchop.json",
           "src/main/java/net/mcreator/pigbasemod/item/GreenPorkchopItem.java"
         ]
-      }
+      },
+      "path": "~/Resources"
     },
     {
       "name": "PIGResources",
@@ -21,7 +22,8 @@
       "registry_name": "pig_resources",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Other"
     },
     {
       "name": "Minion",
@@ -35,7 +37,48 @@
           "src/main/java/net/mcreator/pigbasemod/client/renderer/MinionRenderer.java",
           "src/main/java/net/mcreator/pigbasemod/entity/MinionEntity.java"
         ]
-      }
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "MinionLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pig_basemod/loot_tables/entities/minion.json"
+        ]
+      },
+      "path": "~/Other/LootTables"
+    },
+    {
+      "name": "Indusium",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "indusium",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/item/IndusiumItem.java",
+          "src/main/resources/assets/pig_basemod/models/item/indusium.json"
+        ]
+      },
+      "path": "~/Resources"
+    },
+    {
+      "name": "Gavna",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gavna",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pig_basemod/recipes/gavna.json"
+        ]
+      },
+      "path": "~/Resources"
     }
   ],
   "variable_elements": [],
@@ -71,6 +114,7 @@
     "en_us": {
       "subtitles.minionhurt": "",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
+      "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "subtitles.minionambient": "",
@@ -80,7 +124,34 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Resources",
+        "children": []
+      },
+      {
+        "name": "Other",
+        "children": [
+          {
+            "name": "LootTables",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Entities",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": [
+          {
+            "name": "Viruses",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "pig_basemod",

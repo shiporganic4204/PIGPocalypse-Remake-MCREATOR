@@ -79,6 +79,19 @@
         ]
       },
       "path": "~/Resources"
+    },
+    {
+      "name": "PigVirus",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_virus",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/potion/PigVirusMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/Viruses"
     }
   ],
   "variable_elements": [],
@@ -113,6 +126,7 @@
   "language_map": {
     "en_us": {
       "subtitles.minionhurt": "",
+      "effect.pig_basemod.pig_virus": "Pig-Curse",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
       "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
@@ -141,6 +155,15 @@
       {
         "name": "Entities",
         "children": []
+      },
+      {
+        "name": "Effects",
+        "children": [
+          {
+            "name": "Viruses",
+            "children": []
+          }
+        ]
       }
     ]
   },

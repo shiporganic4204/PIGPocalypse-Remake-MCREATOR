@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.pigbasemod.init.PigBasemodModTabs;
 import net.mcreator.pigbasemod.init.PigBasemodModSounds;
+import net.mcreator.pigbasemod.init.PigBasemodModMobEffects;
 import net.mcreator.pigbasemod.init.PigBasemodModItems;
 import net.mcreator.pigbasemod.init.PigBasemodModEntities;
 
@@ -47,6 +48,8 @@ public class PigBasemodMod {
 		PigBasemodModEntities.REGISTRY.register(bus);
 
 		PigBasemodModTabs.REGISTRY.register(bus);
+
+		PigBasemodModMobEffects.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init
