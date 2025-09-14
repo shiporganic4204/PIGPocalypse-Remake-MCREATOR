@@ -18,6 +18,7 @@ public class PigBasemodModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, PigBasemodMod.MODID);
 	public static final RegistryObject<Item> GREEN_PORKCHOP = REGISTRY.register("green_porkchop", () -> new GreenPorkchopItem());
 	public static final RegistryObject<Item> MINION_SPAWN_EGG = REGISTRY.register("minion_spawn_egg", () -> new ForgeSpawnEggItem(PigBasemodModEntities.MINION, -13408768, -10066432, new Item.Properties()));
+	public static final RegistryObject<Item> INDUSIUM = REGISTRY.register("indusium", () -> new IndusiumItem());
 	// Start of user code block custom items
 	// End of user code block custom items
 }
