@@ -1,9 +1,14 @@
 {
   "subtitles.minionhurt": "",
-  "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
+  "block.pig_basemod.infected_block": "Infected Block",
   "item.pig_basemod.green_porkchop": "Green Porkchop",
   "entity.pig_basemod.minion": "Pig_Minion",
-  "subtitles.minionambient": "",
+  "item_group.pig_basemod.pigblocks": "PIGBLOCKS",
+  "block.pig_basemod.infectedfountain": "Infectedfountain",
   "item_group.pig_basemod.pig_resources": "P!G_Resources",
+  "effect.pig_basemod.pig_virus": "Pig-Curse",
+  "item.pig_basemod.indusium": "Indusium",
+  "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
+  "subtitles.minionambient": "",
   "subtitles.miniondie": ""
 }

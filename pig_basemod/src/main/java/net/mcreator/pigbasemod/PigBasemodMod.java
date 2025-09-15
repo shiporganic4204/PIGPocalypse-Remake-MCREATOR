@@ -22,6 +22,8 @@ import net.mcreator.pigbasemod.init.PigBasemodModSounds;
 import net.mcreator.pigbasemod.init.PigBasemodModMobEffects;
 import net.mcreator.pigbasemod.init.PigBasemodModItems;
 import net.mcreator.pigbasemod.init.PigBasemodModEntities;
+import net.mcreator.pigbasemod.init.PigBasemodModBlocks;
+import net.mcreator.pigbasemod.init.PigBasemodModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -43,7 +45,8 @@ public class PigBasemodMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PigBasemodModSounds.REGISTRY.register(bus);
-
+		PigBasemodModBlocks.REGISTRY.register(bus);
+		PigBasemodModBlockEntities.REGISTRY.register(bus);
 		PigBasemodModItems.REGISTRY.register(bus);
 		PigBasemodModEntities.REGISTRY.register(bus);
 

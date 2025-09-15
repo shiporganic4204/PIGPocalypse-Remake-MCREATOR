@@ -16,6 +16,8 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.pigbasemod.entity.SporeEntity;
+import net.mcreator.pigbasemod.entity.Spore2Entity;
 import net.mcreator.pigbasemod.entity.MinionEntity;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
@@ -26,6 +28,10 @@ public class PigBasemodModEntities {
 			EntityType.Builder.<MinionEntity>of(MinionEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MinionEntity::new)
 
 					.sized(0.9f, 0.9f));
+	public static final RegistryObject<EntityType<SporeEntity>> SPORE = register("spore",
+			EntityType.Builder.<SporeEntity>of(SporeEntity::new, MobCategory.MISC).setCustomClientFactory(SporeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<Spore2Entity>> SPORE_2 = register("spore_2",
+			EntityType.Builder.<Spore2Entity>of(Spore2Entity::new, MobCategory.MISC).setCustomClientFactory(Spore2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

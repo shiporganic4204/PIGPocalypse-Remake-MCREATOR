@@ -13,6 +13,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.pigbasemod.PigBasemodMod;
+
 public class PigVirusOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -37,6 +39,9 @@ public class PigVirusOnEffectActiveTickProcedure {
 		}
 		if (entity.getPersistentData().getDouble("PigVirusStage") == 4) {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)), 1000);
+			PigBasemodMod.queueServerWork(5, () -> {
+				entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)), 1000);
+			});
 		}
 	}
 }

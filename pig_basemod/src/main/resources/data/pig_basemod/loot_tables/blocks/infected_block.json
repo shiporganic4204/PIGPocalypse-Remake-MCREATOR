@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "pig_basemod:blocks/infected_block"
+}
