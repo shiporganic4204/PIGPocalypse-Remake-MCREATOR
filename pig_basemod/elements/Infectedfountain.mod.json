@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "infectedblock1",
-    "textureTop": "fountainzagotovka",
+    "textureTop": "fountain",
     "textureLeft": "infectedblock1",
     "textureFront": "infectedblock1",
     "textureRight": "infectedblock1",

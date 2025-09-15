@@ -2,7 +2,7 @@
   "parent": "block/cube",
   "textures": {
     "down": "pig_basemod:block/infectedblock1",
-    "up": "pig_basemod:block/infectorzagotovka",
+    "up": "pig_basemod:block/infector",
     "north": "pig_basemod:block/infectedblock1",
     "east": "pig_basemod:block/infectedblock1",
     "south": "pig_basemod:block/infectedblock1",

@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "infectedblock1",
-    "textureTop": "infectorzagotovka",
+    "textureTop": "infector",
     "textureLeft": "infectedblock1",
     "textureFront": "infectedblock1",
     "textureRight": "infectedblock1",

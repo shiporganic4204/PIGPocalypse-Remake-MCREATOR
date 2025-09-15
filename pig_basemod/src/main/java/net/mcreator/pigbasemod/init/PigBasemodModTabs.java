@@ -35,6 +35,9 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModBlocks.DANCHI_STAIRS.get().asItem());
 				tabData.accept(PigBasemodModBlocks.DANCHI_SLAB.get().asItem());
 				tabData.accept(PigBasemodModBlocks.DANCHI_WALL.get().asItem());
+				tabData.accept(PigBasemodModBlocks.INFECTION_CORE.get().asItem());
+				tabData.accept(PigBasemodModBlocks.INFECTED_LEAVES.get().asItem());
+				tabData.accept(PigBasemodModBlocks.INFECTED_LOG.get().asItem());
 			}).withTabsBefore(PIG_RESOURCES.getId()).build());
 
 	@SubscribeEvent

@@ -10,6 +10,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -39,8 +40,8 @@ public class InfectorOnTickUpdateProcedure {
 				return -1;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "inf") > 10) {
-			int horizontalRadiusSphere = (int) 5 - 1;
-			int verticalRadiusSphere = (int) 3 - 1;
+			int horizontalRadiusSphere = (int) 6 - 1;
+			int verticalRadiusSphere = (int) 5 - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -49,20 +50,18 @@ public class InfectorOnTickUpdateProcedure {
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
 							if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR) && !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTOR.get())
+									&& !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTION_CORE.get())
 									&& !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTEDFOUNTAIN.get())) {
-								{
-									BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
-									BlockState _bs = PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState();
-									BlockState _bso = world.getBlockState(_bp);
-									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-										if (_property != null && _bs.getValue(_property) != null)
-											try {
-												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-											} catch (Exception e) {
-											}
+								if (world.getBlockFloorHeight(BlockPos.containing(x + xi, y + i, z + zi)) > 0) {
+									if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:logs")))
+											|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:planks")))) {
+										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LOG.get().defaultBlockState(), 3);
+									} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/shovel")))
+											|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:stone")))) {
+										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState(), 3);
+									} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:leaves")))) {
+										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LEAVES.get().defaultBlockState(), 3);
 									}
-									world.setBlock(_bp, _bs, 3);
 								}
 							}
 						}

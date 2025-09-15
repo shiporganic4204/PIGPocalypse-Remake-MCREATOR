@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pig_basemod:block/infectedlog",
+    "up": "pig_basemod:block/infectedlog",
+    "north": "pig_basemod:block/infectedlog",
+    "east": "pig_basemod:block/infectedlog",
+    "south": "pig_basemod:block/infectedlog",
+    "west": "pig_basemod:block/infectedlog",
+    "particle": "pig_basemod:block/infectedlog"
+  },
+  "render_type": "solid"
+}

@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.pigbasemod.item.IndusiumItem;
 import net.mcreator.pigbasemod.item.GreenPorkchopItem;
+import net.mcreator.pigbasemod.block.display.InfectionCoreDisplayItem;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 public class PigBasemodModItems {
@@ -29,6 +30,9 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> DANCHI_STAIRS = block(PigBasemodModBlocks.DANCHI_STAIRS);
 	public static final RegistryObject<Item> DANCHI_SLAB = block(PigBasemodModBlocks.DANCHI_SLAB);
 	public static final RegistryObject<Item> DANCHI_WALL = block(PigBasemodModBlocks.DANCHI_WALL);
+	public static final RegistryObject<Item> INFECTION_CORE = REGISTRY.register(PigBasemodModBlocks.INFECTION_CORE.getId().getPath(), () -> new InfectionCoreDisplayItem(PigBasemodModBlocks.INFECTION_CORE.get(), new Item.Properties()));
+	public static final RegistryObject<Item> INFECTED_LEAVES = block(PigBasemodModBlocks.INFECTED_LEAVES);
+	public static final RegistryObject<Item> INFECTED_LOG = block(PigBasemodModBlocks.INFECTED_LOG);
 
 	// Start of user code block custom items
 	// End of user code block custom items

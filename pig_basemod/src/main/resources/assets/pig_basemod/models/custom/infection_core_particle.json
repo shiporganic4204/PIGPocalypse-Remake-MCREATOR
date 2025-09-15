@@ -1,0 +1,7 @@
+
+{
+  "parent": "pig_basemod:displaysettings/core",
+  "textures": {
+    "particle": "pig_basemod:block/infectedblock1"
+  }
+}

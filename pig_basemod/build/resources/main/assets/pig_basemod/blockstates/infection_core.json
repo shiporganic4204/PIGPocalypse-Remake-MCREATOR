@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "pig_basemod:custom/infection_core_particle"
+    },
+    "facing=east": {
+      "model": "pig_basemod:custom/infection_core_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "pig_basemod:custom/infection_core_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "pig_basemod:custom/infection_core_particle",
+      "y": 270
+    }
+  }
+}
