@@ -39,5 +39,8 @@ public class SporeProjectileHitsBlockProcedure {
 				}
 			}
 		}
+		if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PigBasemodModBlocks.INFECTEDFOUNTAIN.get())) {
+			world.setBlock(BlockPos.containing(x, y, z), PigBasemodModBlocks.INFECTOR.get().defaultBlockState(), 3);
+		}
 	}
 }

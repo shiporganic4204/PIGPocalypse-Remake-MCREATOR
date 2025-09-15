@@ -24,6 +24,7 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> INDUSIUM = REGISTRY.register("indusium", () -> new IndusiumItem());
 	public static final RegistryObject<Item> INFECTED_BLOCK = block(PigBasemodModBlocks.INFECTED_BLOCK);
 	public static final RegistryObject<Item> INFECTEDFOUNTAIN = block(PigBasemodModBlocks.INFECTEDFOUNTAIN);
+	public static final RegistryObject<Item> INFECTOR = block(PigBasemodModBlocks.INFECTOR);
 
 	// Start of user code block custom items
 	// End of user code block custom items

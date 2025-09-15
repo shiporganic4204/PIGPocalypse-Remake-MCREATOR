@@ -137,7 +137,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "InfectedBlock",
@@ -154,7 +154,7 @@
           "src/main/resources/assets/pig_basemod/models/block/infected_block.json"
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "Infectedfountain",
@@ -172,7 +172,7 @@
           "src/main/resources/assets/pig_basemod/models/block/infectedfountain.json"
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "Spore",
@@ -185,7 +185,7 @@
           "src/main/java/net/mcreator/pigbasemod/entity/SporeEntity.java"
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "SporeProjectileHitsBlock",
@@ -216,7 +216,7 @@
           }
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "InfectedfountainOnTickUpdate",
@@ -247,7 +247,7 @@
           }
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "Spore2",
@@ -260,7 +260,7 @@
           "src/main/java/net/mcreator/pigbasemod/entity/Spore2Entity.java"
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
     },
     {
       "name": "SporeProjectile22222",
@@ -291,7 +291,117 @@
           }
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Infection"
+    },
+    {
+      "name": "InfectedfountainBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infectedfountain_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/InfectedfountainBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Infection"
+    },
+    {
+      "name": "Infector",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infector",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/infector.json",
+          "src/main/resources/assets/pig_basemod/models/item/infector.json",
+          "src/main/java/net/mcreator/pigbasemod/block/InfectorBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/infector.json",
+          "src/main/resources/assets/pig_basemod/blockstates/infector.json"
+        ]
+      },
+      "path": "~/Infection"
+    },
+    {
+      "name": "InfectorOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infector_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/InfectorOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Infection"
+    },
+    {
+      "name": "InfectorBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infector_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/InfectorBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Infection"
     }
   ],
   "variable_elements": [],
@@ -326,6 +436,7 @@
   "language_map": {
     "en_us": {
       "subtitles.minionhurt": "",
+      "block.pig_basemod.infector": "Infector",
       "block.pig_basemod.infected_block": "Infected Block",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
@@ -369,7 +480,7 @@
         ]
       },
       {
-        "name": "Blocks",
+        "name": "Infection",
         "children": []
       }
     ]

@@ -1,5 +1,6 @@
 {
   "subtitles.minionhurt": "",
+  "block.pig_basemod.infector": "Infector",
   "block.pig_basemod.infected_block": "Infected Block",
   "item.pig_basemod.green_porkchop": "Green Porkchop",
   "entity.pig_basemod.minion": "Pig_Minion",

@@ -26,7 +26,7 @@ public class InfectedfountainOnTickUpdateProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "uses") > 20) {
+		}.getValue(world, BlockPos.containing(x, y, z), "uses") > 5) {
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
@@ -71,7 +71,7 @@ public class InfectedfountainOnTickUpdateProcedure {
 					}
 				}.getArrow(projectileLevel, 1, 0, (byte) 1);
 				_entityToSpawn.setPos(x, (y + 1), z);
-				_entityToSpawn.shoot(0, 1, 0, 1, 10);
+				_entityToSpawn.shoot(0, 1, 0, 1, 15);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (!world.isClientSide()) {

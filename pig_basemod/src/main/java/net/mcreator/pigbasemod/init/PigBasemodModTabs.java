@@ -30,6 +30,7 @@ public class PigBasemodModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pigblocks")).icon(() -> new ItemStack(Blocks.TUFF)).displayItems((parameters, tabData) -> {
 				tabData.accept(PigBasemodModBlocks.INFECTED_BLOCK.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTEDFOUNTAIN.get().asItem());
+				tabData.accept(PigBasemodModBlocks.INFECTOR.get().asItem());
 			}).withTabsBefore(PIG_RESOURCES.getId()).build());
 
 	@SubscribeEvent

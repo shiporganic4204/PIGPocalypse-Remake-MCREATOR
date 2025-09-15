@@ -31,7 +31,7 @@ public class InfectedfountainBlock extends Block implements EntityBlock {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 50);
+		world.scheduleTick(pos, this, 350);
 		InfectedfountainBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
@@ -42,7 +42,7 @@ public class InfectedfountainBlock extends Block implements EntityBlock {
 		int y = pos.getY();
 		int z = pos.getZ();
 		InfectedfountainOnTickUpdateProcedure.execute(world, x, y, z);
-		world.scheduleTick(pos, this, 50);
+		world.scheduleTick(pos, this, 350);
 	}
 
 	@Override

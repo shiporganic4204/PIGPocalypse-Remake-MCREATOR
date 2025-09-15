@@ -11,12 +11,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.pigbasemod.block.entity.InfectorBlockEntity;
 import net.mcreator.pigbasemod.block.entity.InfectedfountainBlockEntity;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 public class PigBasemodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, PigBasemodMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> INFECTEDFOUNTAIN = register("infectedfountain", PigBasemodModBlocks.INFECTEDFOUNTAIN, InfectedfountainBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> INFECTOR = register("infector", PigBasemodModBlocks.INFECTOR, InfectorBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
