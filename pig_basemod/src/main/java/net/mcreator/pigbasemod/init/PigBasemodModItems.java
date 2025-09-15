@@ -33,6 +33,7 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> INFECTION_CORE = REGISTRY.register(PigBasemodModBlocks.INFECTION_CORE.getId().getPath(), () -> new InfectionCoreDisplayItem(PigBasemodModBlocks.INFECTION_CORE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> INFECTED_LEAVES = block(PigBasemodModBlocks.INFECTED_LEAVES);
 	public static final RegistryObject<Item> INFECTED_LOG = block(PigBasemodModBlocks.INFECTED_LOG);
+	public static final RegistryObject<Item> INFECTED_GRASS = block(PigBasemodModBlocks.INFECTED_GRASS);
 
 	// Start of user code block custom items
 	// End of user code block custom items

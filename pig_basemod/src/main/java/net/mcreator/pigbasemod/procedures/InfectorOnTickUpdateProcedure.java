@@ -40,6 +40,8 @@ public class InfectorOnTickUpdateProcedure {
 				return -1;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "inf") > 10) {
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 20, 3, 3, 3, 0);
 			int horizontalRadiusSphere = (int) 6 - 1;
 			int verticalRadiusSphere = (int) 5 - 1;
 			int yIterationsSphere = verticalRadiusSphere;
@@ -52,15 +54,20 @@ public class InfectorOnTickUpdateProcedure {
 							if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR) && !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTOR.get())
 									&& !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTION_CORE.get())
 									&& !((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PigBasemodModBlocks.INFECTEDFOUNTAIN.get())) {
-								if (world.getBlockFloorHeight(BlockPos.containing(x + xi, y + i, z + zi)) > 0) {
-									if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:logs")))
-											|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:planks")))) {
-										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LOG.get().defaultBlockState(), 3);
-									} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/shovel")))
-											|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:stone")))) {
-										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState(), 3);
-									} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:leaves")))) {
-										world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LEAVES.get().defaultBlockState(), 3);
+								if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.GRASS) {
+									world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+									world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_GRASS.get().defaultBlockState(), 3);
+								} else {
+									if (world.getBlockFloorHeight(BlockPos.containing(x + xi, y + i, z + zi)) > 0) {
+										if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:logs")))
+												|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:planks")))) {
+											world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LOG.get().defaultBlockState(), 3);
+										} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/shovel")))
+												|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:stone")))) {
+											world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState(), 3);
+										} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:leaves")))) {
+											world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PigBasemodModBlocks.INFECTED_LEAVES.get().defaultBlockState(), 3);
+										}
 									}
 								}
 							}

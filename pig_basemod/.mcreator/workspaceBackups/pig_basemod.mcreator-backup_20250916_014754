@@ -534,6 +534,54 @@
         ]
       },
       "path": "~/Infection"
+    },
+    {
+      "name": "InfectedGrassOnBoneMealSuccess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_grass_on_bone_meal_success",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/InfectedGrassOnBoneMealSuccessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Infection"
+    },
+    {
+      "name": "InfectedGrass",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_grass",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/block/infected_grass.json",
+          "src/main/resources/assets/pig_basemod/blockstates/infected_grass.json",
+          "src/main/resources/assets/pig_basemod/models/item/infected_grass.json",
+          "src/main/java/net/mcreator/pigbasemod/block/InfectedGrassBlock.java",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/infected_grass.json"
+        ]
+      },
+      "path": "~/Infection"
     }
   ],
   "variable_elements": [],
@@ -581,6 +629,9 @@
     ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:DanchiStairs"
+    ],
+    "BLOCKS:minecraft:logs": [
+      "CUSTOM:InfectedLog"
     ]
   },
   "tab_element_order": {},
@@ -593,6 +644,7 @@
       "block.pig_basemod.danchi_stairs": "Danchi stairs",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
+      "block.pig_basemod.infected_grass": "Infected Grass",
       "item_group.pig_basemod.pigblocks": "PIGBLOCKS",
       "block.pig_basemod.danchi_wall": "Danchi wall",
       "block.pig_basemod.infectedfountain": "Infectedfountain",

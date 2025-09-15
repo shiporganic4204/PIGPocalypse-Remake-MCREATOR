@@ -38,12 +38,15 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModBlocks.INFECTION_CORE.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTED_LEAVES.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTED_LOG.get().asItem());
+				tabData.accept(PigBasemodModBlocks.INFECTED_GRASS.get().asItem());
 			}).withTabsBefore(PIG_RESOURCES.getId()).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PigBasemodModItems.MINION_SPAWN_EGG.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+			tabData.accept(PigBasemodModBlocks.INFECTED_GRASS.get().asItem());
 		}
 	}
 }

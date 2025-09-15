@@ -15,6 +15,7 @@ import net.mcreator.pigbasemod.block.InfectionCoreBlock;
 import net.mcreator.pigbasemod.block.InfectedfountainBlock;
 import net.mcreator.pigbasemod.block.InfectedLogBlock;
 import net.mcreator.pigbasemod.block.InfectedLeavesBlock;
+import net.mcreator.pigbasemod.block.InfectedGrassBlock;
 import net.mcreator.pigbasemod.block.InfectedBlockBlock;
 import net.mcreator.pigbasemod.block.DanchiWallBlock;
 import net.mcreator.pigbasemod.block.DanchiStairsBlock;
@@ -34,6 +35,7 @@ public class PigBasemodModBlocks {
 	public static final RegistryObject<Block> INFECTION_CORE = REGISTRY.register("infection_core", () -> new InfectionCoreBlock());
 	public static final RegistryObject<Block> INFECTED_LEAVES = REGISTRY.register("infected_leaves", () -> new InfectedLeavesBlock());
 	public static final RegistryObject<Block> INFECTED_LOG = REGISTRY.register("infected_log", () -> new InfectedLogBlock());
+	public static final RegistryObject<Block> INFECTED_GRASS = REGISTRY.register("infected_grass", () -> new InfectedGrassBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

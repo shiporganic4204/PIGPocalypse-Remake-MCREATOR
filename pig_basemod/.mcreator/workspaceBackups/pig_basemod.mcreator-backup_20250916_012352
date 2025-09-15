@@ -534,6 +534,37 @@
         ]
       },
       "path": "~/Infection"
+    },
+    {
+      "name": "InfectedGrassOnBoneMealSuccess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_grass_on_bone_meal_success",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/InfectedGrassOnBoneMealSuccessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Infection"
     }
   ],
   "variable_elements": [],

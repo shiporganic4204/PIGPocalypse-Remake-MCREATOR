@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "pig_basemod:block/umenyafetishnaushkiihvostik",
+    "particle": "pig_basemod:block/umenyafetishnaushkiihvostik"
+  },
+  "render_type": "cutout"
+}
