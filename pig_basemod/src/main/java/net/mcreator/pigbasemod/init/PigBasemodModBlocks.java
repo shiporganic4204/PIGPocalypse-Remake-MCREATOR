@@ -13,6 +13,10 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.pigbasemod.block.InfectorBlock;
 import net.mcreator.pigbasemod.block.InfectedfountainBlock;
 import net.mcreator.pigbasemod.block.InfectedBlockBlock;
+import net.mcreator.pigbasemod.block.DanchiWallBlock;
+import net.mcreator.pigbasemod.block.DanchiStairsBlock;
+import net.mcreator.pigbasemod.block.DanchiSlabBlock;
+import net.mcreator.pigbasemod.block.DanchiBlockBlock;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 public class PigBasemodModBlocks {
@@ -20,6 +24,10 @@ public class PigBasemodModBlocks {
 	public static final RegistryObject<Block> INFECTED_BLOCK = REGISTRY.register("infected_block", () -> new InfectedBlockBlock());
 	public static final RegistryObject<Block> INFECTEDFOUNTAIN = REGISTRY.register("infectedfountain", () -> new InfectedfountainBlock());
 	public static final RegistryObject<Block> INFECTOR = REGISTRY.register("infector", () -> new InfectorBlock());
+	public static final RegistryObject<Block> DANCHI_BLOCK = REGISTRY.register("danchi_block", () -> new DanchiBlockBlock());
+	public static final RegistryObject<Block> DANCHI_STAIRS = REGISTRY.register("danchi_stairs", () -> new DanchiStairsBlock());
+	public static final RegistryObject<Block> DANCHI_SLAB = REGISTRY.register("danchi_slab", () -> new DanchiSlabBlock());
+	public static final RegistryObject<Block> DANCHI_WALL = REGISTRY.register("danchi_wall", () -> new DanchiWallBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

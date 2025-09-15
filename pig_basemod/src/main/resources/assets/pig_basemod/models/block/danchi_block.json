@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pig_basemod:block/danchitexture",
+    "up": "pig_basemod:block/danchitexture",
+    "north": "pig_basemod:block/danchitexture",
+    "east": "pig_basemod:block/danchitexture",
+    "south": "pig_basemod:block/danchitexture",
+    "west": "pig_basemod:block/danchitexture",
+    "particle": "pig_basemod:block/danchitexture"
+  },
+  "render_type": "solid"
+}

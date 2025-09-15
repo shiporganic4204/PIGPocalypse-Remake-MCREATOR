@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pig_basemod:block/danchi_slab"
+    },
+    "type=top": {
+      "model": "pig_basemod:block/danchi_slab_top"
+    },
+    "type=double": {
+      "model": "pig_basemod:block/danchi_slab_full"
+    }
+  }
+}

@@ -25,6 +25,10 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> INFECTED_BLOCK = block(PigBasemodModBlocks.INFECTED_BLOCK);
 	public static final RegistryObject<Item> INFECTEDFOUNTAIN = block(PigBasemodModBlocks.INFECTEDFOUNTAIN);
 	public static final RegistryObject<Item> INFECTOR = block(PigBasemodModBlocks.INFECTOR);
+	public static final RegistryObject<Item> DANCHI_BLOCK = block(PigBasemodModBlocks.DANCHI_BLOCK);
+	public static final RegistryObject<Item> DANCHI_STAIRS = block(PigBasemodModBlocks.DANCHI_STAIRS);
+	public static final RegistryObject<Item> DANCHI_SLAB = block(PigBasemodModBlocks.DANCHI_SLAB);
+	public static final RegistryObject<Item> DANCHI_WALL = block(PigBasemodModBlocks.DANCHI_WALL);
 
 	// Start of user code block custom items
 	// End of user code block custom items

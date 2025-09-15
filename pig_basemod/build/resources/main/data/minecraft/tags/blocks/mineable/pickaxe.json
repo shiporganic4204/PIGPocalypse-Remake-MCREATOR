@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "pig_basemod:danchi_wall",
+    "pig_basemod:danchi_slab",
+    "pig_basemod:danchi_stairs",
+    "pig_basemod:danchi_block"
+  ]
+}

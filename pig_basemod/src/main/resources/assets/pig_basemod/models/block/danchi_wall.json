@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "pig_basemod:block/danchitexture",
+    "particle": "pig_basemod:block/danchitexture"
+  },
+  "render_type": "solid"
+}

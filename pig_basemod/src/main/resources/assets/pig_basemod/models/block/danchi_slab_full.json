@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "pig_basemod:block/danchitexture",
+    "bottom": "pig_basemod:block/danchitexture",
+    "top": "pig_basemod:block/danchitexture",
+    "side": "pig_basemod:block/danchitexture"
+  },
+  "render_type": "solid"
+}

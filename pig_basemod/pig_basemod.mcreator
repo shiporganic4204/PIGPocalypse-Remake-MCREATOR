@@ -403,6 +403,81 @@
         ]
       },
       "path": "~/Infection"
+    },
+    {
+      "name": "DanchiBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "danchi_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
+          "src/main/resources/assets/pig_basemod/blockstates/danchi_block.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DanchiStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "danchi_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/block/danchi_stairs.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_stairs_inner.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_stairs.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_stairs.json",
+          "src/main/resources/assets/pig_basemod/blockstates/danchi_stairs.json",
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiStairsBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_stairs_outer.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DanchiSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "danchi_slab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiSlabBlock.java",
+          "src/main/resources/assets/pig_basemod/blockstates/danchi_slab.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_slab_top.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_slab_full.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_slab.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_slab.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_slab.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DanchiWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "danchi_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/block/danchi_wall_side_tall.json",
+          "src/main/resources/assets/pig_basemod/blockstates/danchi_wall.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_wall.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_wall.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_wall_post.json",
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiWallBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_wall_inventory.json",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_wall.json"
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [],
@@ -432,21 +507,41 @@
       "subtitle": ""
     }
   ],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DanchiWall",
+      "~CUSTOM:DanchiSlab",
+      "~CUSTOM:DanchiStairs",
+      "~CUSTOM:DanchiBlock"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:DanchiSlab"
+    ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:DanchiWall"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:DanchiStairs"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "block.pig_basemod.danchi_block": "Danchi Block",
       "subtitles.minionhurt": "",
       "block.pig_basemod.infector": "Infector",
       "block.pig_basemod.infected_block": "Infected Block",
+      "block.pig_basemod.danchi_stairs": "Danchi stairs",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "item_group.pig_basemod.pigblocks": "PIGBLOCKS",
+      "block.pig_basemod.danchi_wall": "Danchi wall",
       "block.pig_basemod.infectedfountain": "Infectedfountain",
       "item_group.pig_basemod.pig_resources": "P!G_Resources",
       "effect.pig_basemod.pig_virus": "Pig-Curse",
       "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
+      "block.pig_basemod.danchi_slab": "Danchi slab",
       "subtitles.minionambient": "",
       "subtitles.miniondie": ""
     }
@@ -482,6 +577,10 @@
       },
       {
         "name": "Infection",
+        "children": []
+      },
+      {
+        "name": "Blocks",
         "children": []
       }
     ]
