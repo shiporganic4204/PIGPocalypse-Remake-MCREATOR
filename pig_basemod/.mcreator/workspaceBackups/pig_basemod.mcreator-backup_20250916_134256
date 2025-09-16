@@ -68,19 +68,6 @@
       "path": "~/Resources"
     },
     {
-      "name": "Gavna",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gavna",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/pig_basemod/recipes/gavna.json"
-        ]
-      },
-      "path": "~/Resources"
-    },
-    {
       "name": "PigVirus",
       "type": "potioneffect",
       "compiles": true,
@@ -137,7 +124,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Infection"
+      "path": "~/Other"
     },
     {
       "name": "InfectedBlock",
@@ -582,6 +569,25 @@
         ]
       },
       "path": "~/Infection"
+    },
+    {
+      "name": "PigVirusEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_virus_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/PigVirusEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
     }
   ],
   "variable_elements": [],
@@ -645,7 +651,7 @@
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "block.pig_basemod.infected_grass": "Infected Grass",
-      "item_group.pig_basemod.pigblocks": "PIGBLOCKS",
+      "item_group.pig_basemod.pigblocks": "P!G_Blocks",
       "block.pig_basemod.danchi_wall": "Danchi wall",
       "block.pig_basemod.infectedfountain": "Infectedfountain",
       "item_group.pig_basemod.pig_resources": "P!G_Resources",
@@ -672,6 +678,10 @@
         "children": [
           {
             "name": "LootTables",
+            "children": []
+          },
+          {
+            "name": "Projectiles",
             "children": []
           }
         ]

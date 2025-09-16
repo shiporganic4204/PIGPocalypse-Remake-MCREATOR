@@ -16,9 +16,11 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.pigbasemod.entity.TriplaneEntity;
 import net.mcreator.pigbasemod.entity.SporeEntity;
 import net.mcreator.pigbasemod.entity.Spore2Entity;
 import net.mcreator.pigbasemod.entity.MinionEntity;
+import net.mcreator.pigbasemod.entity.Bullet1Entity;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -32,6 +34,12 @@ public class PigBasemodModEntities {
 			EntityType.Builder.<SporeEntity>of(SporeEntity::new, MobCategory.MISC).setCustomClientFactory(SporeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<Spore2Entity>> SPORE_2 = register("spore_2",
 			EntityType.Builder.<Spore2Entity>of(Spore2Entity::new, MobCategory.MISC).setCustomClientFactory(Spore2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<Bullet1Entity>> BULLET_1 = register("bullet_1",
+			EntityType.Builder.<Bullet1Entity>of(Bullet1Entity::new, MobCategory.MISC).setCustomClientFactory(Bullet1Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TriplaneEntity>> TRIPLANE = register("triplane",
+			EntityType.Builder.<TriplaneEntity>of(TriplaneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(90).setUpdateInterval(3).setCustomClientFactory(TriplaneEntity::new)
+
+					.sized(2f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -43,11 +51,13 @@ public class PigBasemodModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			MinionEntity.init();
+			TriplaneEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(MINION.get(), MinionEntity.createAttributes().build());
+		event.put(TRIPLANE.get(), TriplaneEntity.createAttributes().build());
 	}
 }

@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.pigbasemod.client.renderer.TriplaneRenderer;
 import net.mcreator.pigbasemod.client.renderer.MinionRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -20,5 +21,7 @@ public class PigBasemodModEntityRenderers {
 		event.registerEntityRenderer(PigBasemodModEntities.MINION.get(), MinionRenderer::new);
 		event.registerEntityRenderer(PigBasemodModEntities.SPORE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PigBasemodModEntities.SPORE_2.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PigBasemodModEntities.BULLET_1.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PigBasemodModEntities.TRIPLANE.get(), TriplaneRenderer::new);
 	}
 }
