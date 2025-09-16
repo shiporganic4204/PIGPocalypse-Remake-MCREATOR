@@ -2,11 +2,13 @@
 package net.mcreator.pigbasemod.potion;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.pigbasemod.procedures.PigVirusOnEffectActiveTickProcedure;
+import net.mcreator.pigbasemod.procedures.PigVirusEffectStartedappliedProcedure;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -20,6 +22,12 @@ public class PigVirusMobEffect extends MobEffect {
 	public List<ItemStack> getCurativeItems() {
 		ArrayList<ItemStack> cures = new ArrayList<ItemStack>();
 		return cures;
+	}
+
+	@Override
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.addAttributeModifiers(entity, attributeMap, amplifier);
+		PigVirusEffectStartedappliedProcedure.execute(entity);
 	}
 
 	@Override

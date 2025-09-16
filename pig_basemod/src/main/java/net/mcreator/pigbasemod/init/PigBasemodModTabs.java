@@ -10,7 +10,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,7 +26,7 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModItems.GREEN_PORKCHOP.get());
 			}).build());
 	public static final RegistryObject<CreativeModeTab> PIGBLOCKS = REGISTRY.register("pigblocks",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pigblocks")).icon(() -> new ItemStack(Blocks.TUFF)).displayItems((parameters, tabData) -> {
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pigblocks")).icon(() -> new ItemStack(PigBasemodModBlocks.INFECTED_BLOCK.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PigBasemodModBlocks.INFECTED_BLOCK.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTEDFOUNTAIN.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTOR.get().asItem());

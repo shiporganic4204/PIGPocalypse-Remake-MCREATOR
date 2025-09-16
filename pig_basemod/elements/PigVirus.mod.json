@@ -16,6 +16,9 @@
     "isProtectedByTotem": false,
     "isCuredbyHoney": false,
     "modifiers": [],
+    "onStarted": {
+      "name": "PigVirusEffectStartedapplied"
+    },
     "onActiveTick": {
       "name": "PigVirusOnEffectActiveTick"
     }

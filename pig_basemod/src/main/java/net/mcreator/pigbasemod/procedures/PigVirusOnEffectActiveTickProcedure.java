@@ -19,6 +19,7 @@ public class PigVirusOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.getPersistentData().putDouble("TTNS", (entity.getPersistentData().getDouble("TTNS") - 1));
 		if (entity.getPersistentData().getDouble("PigVirusStage") == 2) {
 			if (5 == Mth.nextInt(RandomSource.create(), 1, 500)) {
 				if (world instanceof Level _level) {
@@ -29,7 +30,7 @@ public class PigVirusOnEffectActiveTickProcedure {
 			}
 		}
 		if (entity.getPersistentData().getDouble("PigVirusStage") == 3) {
-			if (5 == Mth.nextInt(RandomSource.create(), 1, 500)) {
+			if (5 == Mth.nextInt(RandomSource.create(), 1, 100)) {
 				if (world instanceof Level _level) {
 					if (_level.isClientSide()) {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:minionambient")), SoundSource.MASTER, 1, 1, false);
@@ -42,6 +43,10 @@ public class PigVirusOnEffectActiveTickProcedure {
 			PigBasemodMod.queueServerWork(5, () -> {
 				entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)), 1000);
 			});
+		}
+		if (entity.getPersistentData().getDouble("TTNS") <= 1) {
+			entity.getPersistentData().putDouble("TTNS", (Mth.nextInt(RandomSource.create(), 2400, 6000)));
+			entity.getPersistentData().putDouble("PigVirusStage", (entity.getPersistentData().getDouble("PigVirusStage") + 1));
 		}
 	}
 }
