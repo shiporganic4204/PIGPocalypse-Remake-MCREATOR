@@ -31,6 +31,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -135,7 +136,7 @@ public class TriplaneEntity extends Raider implements RangedAttackMob, GeoEntity
 			public void start() {
 				LivingEntity livingentity = TriplaneEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				TriplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				TriplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 			}
 
 			@Override
@@ -147,12 +148,12 @@ public class TriplaneEntity extends Raider implements RangedAttackMob, GeoEntity
 					double d0 = TriplaneEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						TriplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						TriplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 2.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = TriplaneEntity.this.getRandom();
@@ -162,12 +163,18 @@ public class TriplaneEntity extends Raider implements RangedAttackMob, GeoEntity
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, MinionEntity.class, false, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Villager.class, false, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolem.class, false, false));
-		this.targetSelector.addGoal(8, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			}
+		});
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MinionEntity.class, false, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Villager.class, false, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, IronGolem.class, false, false));
+		this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(1, new TriplaneEntity.RangedAttackGoal(this, 1.25, 20, 30f) {
 			@Override
 			public boolean canContinueToUse() {
