@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "pig_basemod:fossil_ore",
     "pig_basemod:danchi_wall",
     "pig_basemod:danchi_slab",
     "pig_basemod:danchi_stairs",

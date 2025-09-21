@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.pigbasemod.item.IndusiumItem;
 import net.mcreator.pigbasemod.item.GreenPorkchopItem;
+import net.mcreator.pigbasemod.item.FossilItem;
 import net.mcreator.pigbasemod.block.display.InfectionCoreDisplayItem;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
@@ -34,6 +35,8 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> INFECTED_LEAVES = block(PigBasemodModBlocks.INFECTED_LEAVES);
 	public static final RegistryObject<Item> INFECTED_LOG = block(PigBasemodModBlocks.INFECTED_LOG);
 	public static final RegistryObject<Item> INFECTED_GRASS = block(PigBasemodModBlocks.INFECTED_GRASS);
+	public static final RegistryObject<Item> FOSSIL_ORE = block(PigBasemodModBlocks.FOSSIL_ORE);
+	public static final RegistryObject<Item> FOSSIL = REGISTRY.register("fossil", () -> new FossilItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
