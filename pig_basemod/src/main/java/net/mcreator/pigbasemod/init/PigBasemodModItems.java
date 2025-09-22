@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.pigbasemod.item.SwordSharpItem;
 import net.mcreator.pigbasemod.item.SwordBaseItem;
 import net.mcreator.pigbasemod.item.SharpBladeItem;
+import net.mcreator.pigbasemod.item.PlatinumItem;
 import net.mcreator.pigbasemod.item.IndusiumItem;
 import net.mcreator.pigbasemod.item.GreenPorkchopItem;
 import net.mcreator.pigbasemod.item.FossilItem;
@@ -43,6 +44,8 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> SWORD_SHARP = REGISTRY.register("sword_sharp", () -> new SwordSharpItem());
 	public static final RegistryObject<Item> SWORD_BASE = REGISTRY.register("sword_base", () -> new SwordBaseItem());
 	public static final RegistryObject<Item> SHARP_BLADE = REGISTRY.register("sharp_blade", () -> new SharpBladeItem());
+	public static final RegistryObject<Item> PLATINUM_ORE = block(PigBasemodModBlocks.PLATINUM_ORE);
+	public static final RegistryObject<Item> PLATINUM = REGISTRY.register("platinum", () -> new PlatinumItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

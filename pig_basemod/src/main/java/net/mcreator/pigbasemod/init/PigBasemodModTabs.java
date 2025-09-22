@@ -26,6 +26,8 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModItems.GREEN_PORKCHOP.get());
 				tabData.accept(PigBasemodModBlocks.FOSSIL_ORE.get().asItem());
 				tabData.accept(PigBasemodModItems.FOSSIL.get());
+				tabData.accept(PigBasemodModBlocks.PLATINUM_ORE.get().asItem());
+				tabData.accept(PigBasemodModItems.PLATINUM.get());
 			}).build());
 	public static final RegistryObject<CreativeModeTab> PIGBLOCKS = REGISTRY.register("pigblocks",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pigblocks")).icon(() -> new ItemStack(PigBasemodModBlocks.INFECTED_BLOCK.get())).displayItems((parameters, tabData) -> {

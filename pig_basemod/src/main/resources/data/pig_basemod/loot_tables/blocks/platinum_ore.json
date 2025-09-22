@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "pig_basemod:blocks/platinum_ore",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pig_basemod:platinum"
+        }
+      ]
+    }
+  ]
+}

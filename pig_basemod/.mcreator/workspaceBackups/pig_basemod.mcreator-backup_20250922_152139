@@ -735,6 +735,123 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "SharpBlade",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharp_blade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/item/renderer/SharpBladeItemRenderer.java",
+          "src/main/resources/assets/pig_basemod/models/item/sharp_blade.json",
+          "src/main/java/net/mcreator/pigbasemod/item/SharpBladeItem.java",
+          "src/main/java/net/mcreator/pigbasemod/item/model/SharpBladeItemModel.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SwordBasePlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_base_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/SwordBasePlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PlatinumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platinum_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/item/platinum_ore.json",
+          "src/main/java/net/mcreator/pigbasemod/block/PlatinumOreBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/platinum_ore.json",
+          "src/main/resources/assets/pig_basemod/blockstates/platinum_ore.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/platinum_ore.json"
+        ]
+      },
+      "path": "~/Resources/Blocks"
+    },
+    {
+      "name": "Platinum",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platinum",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/item/platinum.json",
+          "src/main/java/net/mcreator/pigbasemod/item/PlatinumItem.java"
+        ]
+      },
+      "path": "~/Resources"
+    },
+    {
+      "name": "PigVirusDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_virus_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/PigVirusDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
     }
   ],
   "variable_elements": [],
@@ -779,7 +896,11 @@
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:FossilOre"
     ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:PlatinumOre"
+    ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:PlatinumOre",
       "~CUSTOM:FossilOre",
       "~CUSTOM:DanchiWall",
       "~CUSTOM:DanchiSlab",
@@ -816,6 +937,7 @@
       "block.pig_basemod.infected_leaves": "Infected Block",
       "block.pig_basemod.infection_core": "Infection Core",
       "effect.pig_basemod.pig_virus": "Pig-Curse",
+      "block.pig_basemod.platinum_ore": "Platinum Ore",
       "item.pig_basemod.triplane_spawn_egg": "Triplane Spawn Egg",
       "item.pig_basemod.sword_sharp": "Sword Sharp",
       "block.pig_basemod.fossil_ore": "Fossil Ore",
@@ -824,11 +946,13 @@
       "entity.pig_basemod.triplane": "Triplane",
       "block.pig_basemod.infected_block": "Infected Block",
       "item_group.pig_basemod.pigblocks": "P!G_Blocks",
+      "item.pig_basemod.sharp_blade": "Sharp blade",
       "item_group.pig_basemod.pig_resources": "P!G_Resources",
       "item.pig_basemod.fossil": "Fossil",
       "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
       "subtitles.bzdin": "bzdin",
+      "item.pig_basemod.platinum": "Platinum",
       "block.pig_basemod.danchi_slab": "Danchi slab",
       "block.pig_basemod.infected_log": "Infected Block",
       "subtitles.minionambient": "",

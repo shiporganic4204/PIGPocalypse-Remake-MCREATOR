@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pig_basemod:block/ore_titanium",
+    "particle": "pig_basemod:block/ore_titanium"
+  },
+  "render_type": "solid"
+}

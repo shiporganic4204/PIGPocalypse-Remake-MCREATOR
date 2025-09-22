@@ -11,6 +11,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.pigbasemod.PigBasemodMod;
@@ -48,5 +49,9 @@ public class PigVirusOnEffectActiveTickProcedure {
 			entity.getPersistentData().putDouble("TTNS", (Mth.nextInt(RandomSource.create(), 2400, 6000)));
 			entity.getPersistentData().putDouble("PigVirusStage", (entity.getPersistentData().getDouble("PigVirusStage") + 1));
 		}
+		if (!world.isClientSide() && world.getServer() != null)
+			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("TTNS: " + entity.getPersistentData().getDouble("TTNS"))), false);
+		if (!world.isClientSide() && world.getServer() != null)
+			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("PigVirusStage: " + entity.getPersistentData().getDouble("PigVirusStage"))), false);
 	}
 }

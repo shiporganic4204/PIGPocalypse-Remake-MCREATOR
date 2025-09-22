@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.pigbasemod.block.PlatinumOreBlock;
 import net.mcreator.pigbasemod.block.InfectorBlock;
 import net.mcreator.pigbasemod.block.InfectionCoreBlock;
 import net.mcreator.pigbasemod.block.InfectedfountainBlock;
@@ -38,6 +39,7 @@ public class PigBasemodModBlocks {
 	public static final RegistryObject<Block> INFECTED_LOG = REGISTRY.register("infected_log", () -> new InfectedLogBlock());
 	public static final RegistryObject<Block> INFECTED_GRASS = REGISTRY.register("infected_grass", () -> new InfectedGrassBlock());
 	public static final RegistryObject<Block> FOSSIL_ORE = REGISTRY.register("fossil_ore", () -> new FossilOreBlock());
+	public static final RegistryObject<Block> PLATINUM_ORE = REGISTRY.register("platinum_ore", () -> new PlatinumOreBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
