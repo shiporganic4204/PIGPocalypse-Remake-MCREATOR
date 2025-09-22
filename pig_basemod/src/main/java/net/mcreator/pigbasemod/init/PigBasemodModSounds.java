@@ -18,4 +18,5 @@ public class PigBasemodModSounds {
 	public static final RegistryObject<SoundEvent> MINIONAMBIENT = REGISTRY.register("minionambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("pig_basemod", "minionambient")));
 	public static final RegistryObject<SoundEvent> MINIONDIE = REGISTRY.register("miniondie", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("pig_basemod", "miniondie")));
 	public static final RegistryObject<SoundEvent> MINIONHURT = REGISTRY.register("minionhurt", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("pig_basemod", "minionhurt")));
+	public static final RegistryObject<SoundEvent> BZDIN = REGISTRY.register("bzdin", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("pig_basemod", "bzdin")));
 }

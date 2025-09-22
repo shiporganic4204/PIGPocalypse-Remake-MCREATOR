@@ -1,0 +1,6 @@
+{
+  "parent": "pig_basemod:displaysettings/bladecool",
+  "textures": {
+    "layer0": "pig_basemod:item/swordtexture1"
+  }
+}

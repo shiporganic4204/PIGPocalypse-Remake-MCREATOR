@@ -48,6 +48,10 @@ public class PigBasemodModTabs {
 			tabData.accept(PigBasemodModItems.MINION_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 			tabData.accept(PigBasemodModBlocks.INFECTED_GRASS.get().asItem());
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+			tabData.accept(PigBasemodModItems.SWORD_SHARP.get());
+			tabData.accept(PigBasemodModItems.SWORD_BASE.get());
+			tabData.accept(PigBasemodModItems.SHARP_BLADE.get());
 		}
 	}
 }

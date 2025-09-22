@@ -22,5 +22,14 @@
         "stream": false
       }
     ]
+  },
+  "bzdin": {
+    "subtitle": "subtitles.bzdin",
+    "sounds": [
+      {
+        "name": "pig_basemod:bzdin",
+        "stream": false
+      }
+    ]
   }
 }
