@@ -817,6 +817,41 @@
         ]
       },
       "path": "~/Resources"
+    },
+    {
+      "name": "PigVirusDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_virus_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/PigVirusDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
     }
   ],
   "variable_elements": [],
@@ -976,6 +1011,10 @@
       },
       {
         "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Crafts",
         "children": []
       }
     ]

@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
@@ -43,6 +44,15 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModBlocks.INFECTED_LOG.get().asItem());
 				tabData.accept(PigBasemodModBlocks.INFECTED_GRASS.get().asItem());
 			}).withTabsBefore(PIG_RESOURCES.getId()).build());
+	public static final RegistryObject<CreativeModeTab> PIG_WARFARE = REGISTRY.register("pig_warfare",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pig_warfare")).icon(() -> new ItemStack(PigBasemodModItems.SWORD_SHARP.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PigBasemodModItems.SWORD_SHARP.get());
+			}).withTabsBefore(PIGBLOCKS.getId()).build());
+	public static final RegistryObject<CreativeModeTab> PIG_ITEMS = REGISTRY.register("pig_items",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pig_items")).icon(() -> new ItemStack(Items.COOKED_PORKCHOP)).displayItems((parameters, tabData) -> {
+				tabData.accept(PigBasemodModItems.SWORD_BASE.get());
+				tabData.accept(PigBasemodModItems.SHARP_BLADE.get());
+			}).withTabsBefore(PIG_WARFARE.getId()).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
@@ -50,10 +60,6 @@ public class PigBasemodModTabs {
 			tabData.accept(PigBasemodModItems.MINION_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 			tabData.accept(PigBasemodModBlocks.INFECTED_GRASS.get().asItem());
-		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
-			tabData.accept(PigBasemodModItems.SWORD_SHARP.get());
-			tabData.accept(PigBasemodModItems.SWORD_BASE.get());
-			tabData.accept(PigBasemodModItems.SHARP_BLADE.get());
 		}
 	}
 }

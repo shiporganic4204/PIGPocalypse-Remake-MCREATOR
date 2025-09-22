@@ -675,8 +675,8 @@
         "files": [
           "src/main/java/net/mcreator/pigbasemod/item/renderer/SwordSharpItemRenderer.java",
           "src/main/resources/assets/pig_basemod/models/item/sword_sharp.json",
-          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java",
-          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java"
+          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java",
+          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java"
         ]
       },
       "path": "~/Items"
@@ -690,9 +690,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/pigbasemod/item/model/SwordBaseItemModel.java",
-          "src/main/java/net/mcreator/pigbasemod/item/SwordBaseItem.java",
           "src/main/resources/assets/pig_basemod/models/item/sword_base.json",
-          "src/main/java/net/mcreator/pigbasemod/item/renderer/SwordBaseItemRenderer.java"
+          "src/main/java/net/mcreator/pigbasemod/item/renderer/SwordBaseItemRenderer.java",
+          "src/main/java/net/mcreator/pigbasemod/item/SwordBaseItem.java"
         ]
       },
       "path": "~/Items"
@@ -803,6 +803,77 @@
         ]
       },
       "path": "~/Resources/Blocks"
+    },
+    {
+      "name": "Platinum",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platinum",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/item/platinum.json",
+          "src/main/java/net/mcreator/pigbasemod/item/PlatinumItem.java"
+        ]
+      },
+      "path": "~/Resources"
+    },
+    {
+      "name": "PigVirusDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_virus_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/PigVirusDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "PIGWarfare",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_warfare",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Other"
+    },
+    {
+      "name": "PIGItems",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_items",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Other"
     }
   ],
   "variable_elements": [],
@@ -890,12 +961,14 @@
       "effect.pig_basemod.pig_virus": "Pig-Curse",
       "block.pig_basemod.platinum_ore": "Platinum Ore",
       "item.pig_basemod.triplane_spawn_egg": "Triplane Spawn Egg",
+      "item_group.pig_basemod.pig_items": "P!G_Items",
       "item.pig_basemod.sword_sharp": "Sword Sharp",
       "block.pig_basemod.fossil_ore": "Fossil Ore",
       "item.pig_basemod.sword_base": "Sword Base",
       "block.pig_basemod.infector": "Infector",
       "entity.pig_basemod.triplane": "Triplane",
       "block.pig_basemod.infected_block": "Infected Block",
+      "item_group.pig_basemod.pig_warfare": "P!G_Warfare",
       "item_group.pig_basemod.pigblocks": "P!G_Blocks",
       "item.pig_basemod.sharp_blade": "Sharp blade",
       "item_group.pig_basemod.pig_resources": "P!G_Resources",
@@ -903,6 +976,7 @@
       "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
       "subtitles.bzdin": "bzdin",
+      "item.pig_basemod.platinum": "Platinum",
       "block.pig_basemod.danchi_slab": "Danchi slab",
       "block.pig_basemod.infected_log": "Infected Block",
       "subtitles.minionambient": "",
@@ -961,6 +1035,10 @@
       },
       {
         "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Crafts",
         "children": []
       }
     ]
