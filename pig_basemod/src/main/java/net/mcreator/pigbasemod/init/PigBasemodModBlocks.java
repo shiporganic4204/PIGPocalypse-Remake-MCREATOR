@@ -18,6 +18,7 @@ import net.mcreator.pigbasemod.block.InfectedLogBlock;
 import net.mcreator.pigbasemod.block.InfectedLeavesBlock;
 import net.mcreator.pigbasemod.block.InfectedGrassBlock;
 import net.mcreator.pigbasemod.block.InfectedBlockBlock;
+import net.mcreator.pigbasemod.block.FossilOreSandBlock;
 import net.mcreator.pigbasemod.block.FossilOreBlock;
 import net.mcreator.pigbasemod.block.DanchiWallBlock;
 import net.mcreator.pigbasemod.block.DanchiStairsBlock;
@@ -40,6 +41,7 @@ public class PigBasemodModBlocks {
 	public static final RegistryObject<Block> INFECTED_GRASS = REGISTRY.register("infected_grass", () -> new InfectedGrassBlock());
 	public static final RegistryObject<Block> FOSSIL_ORE = REGISTRY.register("fossil_ore", () -> new FossilOreBlock());
 	public static final RegistryObject<Block> PLATINUM_ORE = REGISTRY.register("platinum_ore", () -> new PlatinumOreBlock());
+	public static final RegistryObject<Block> FOSSIL_ORE_SAND = REGISTRY.register("fossil_ore_sand", () -> new FossilOreSandBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

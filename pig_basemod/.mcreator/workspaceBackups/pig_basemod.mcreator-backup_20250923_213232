@@ -936,6 +936,25 @@
         ]
       },
       "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "GreenInfectionEffestApplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_infection_effest_applied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/GreenInfectionEffestAppliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
     }
   ],
   "variable_elements": [],
@@ -1100,6 +1119,15 @@
       {
         "name": "Crafts",
         "children": []
+      },
+      {
+        "name": "Pigdustrial",
+        "children": [
+          {
+            "name": "Blocks",
+            "children": []
+          }
+        ]
       }
     ]
   },

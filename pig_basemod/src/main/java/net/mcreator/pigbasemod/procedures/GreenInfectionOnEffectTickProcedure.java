@@ -37,12 +37,12 @@ public class GreenInfectionOnEffectTickProcedure {
 		if (entity.getPersistentData().getDouble("GreenInfectionStage") == 1) {
 			if (5 == Mth.nextInt(RandomSource.create(), 1, 500)) {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.HAPPY_VILLAGER, x, y, z, 10, 1, 1, 1, 0);
+					_level.sendParticles(ParticleTypes.HAPPY_VILLAGER, x, y, z, 15, 0, 0, 0, 0);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:minionambient")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:minionambient")), SoundSource.MASTER, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:minionambient")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:minionambient")), SoundSource.MASTER, 1, 1, false);
 					}
 				}
 				{

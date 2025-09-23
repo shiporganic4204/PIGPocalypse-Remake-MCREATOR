@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "pig_basemod:fossil_ore_sand",
     "pig_basemod:fossil_ore"
   ]
 }

@@ -399,11 +399,11 @@
       "registry_name": "danchi_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
-          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
           "src/main/resources/assets/pig_basemod/blockstates/danchi_block.json",
-          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json",
-          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json"
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -874,6 +874,107 @@
         "files": []
       },
       "path": "~/Other"
+    },
+    {
+      "name": "Circuit",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "circuit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/item/CircuitItem.java",
+          "src/main/resources/assets/pig_basemod/models/item/circuit.json"
+        ]
+      },
+      "path": "~/Resources"
+    },
+    {
+      "name": "GreenInfection",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_infection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/potion/GreenInfectionMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "GreenInfectionOnEffectTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_infection_on_effect_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/GreenInfectionOnEffectTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "GreenInfectionEffestApplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_infection_effest_applied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/GreenInfectionEffestAppliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "FossilOreSand",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fossil_ore_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/block/fossil_ore_sand.json",
+          "src/main/resources/data/pig_basemod/worldgen/placed_feature/fossil_ore_sand.json",
+          "src/main/java/net/mcreator/pigbasemod/block/FossilOreSandBlock.java",
+          "src/main/resources/data/pig_basemod/worldgen/configured_feature/fossil_ore_sand.json",
+          "src/main/resources/assets/pig_basemod/models/item/fossil_ore_sand.json",
+          "src/main/resources/data/pig_basemod/forge/biome_modifier/fossil_ore_sand_biome_modifier.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/fossil_ore_sand.json",
+          "src/main/resources/assets/pig_basemod/blockstates/fossil_ore_sand.json"
+        ]
+      },
+      "path": "~/Resources/Blocks"
     }
   ],
   "variable_elements": [],
@@ -916,12 +1017,14 @@
       "~CUSTOM:InfectedLeaves"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:FossilOreSand",
       "~CUSTOM:FossilOre"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:PlatinumOre"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:FossilOreSand",
       "~CUSTOM:PlatinumOre",
       "~CUSTOM:FossilOre",
       "~CUSTOM:DanchiWall",
@@ -954,12 +1057,14 @@
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "block.pig_basemod.infected_grass": "Infected Grass",
+      "block.pig_basemod.fossil_ore_sand": "Fossil Ore",
       "block.pig_basemod.danchi_wall": "Danchi wall",
       "block.pig_basemod.infectedfountain": "Infectedfountain",
       "block.pig_basemod.infected_leaves": "Infected Block",
       "block.pig_basemod.infection_core": "Infection Core",
       "effect.pig_basemod.pig_virus": "Pig-Curse",
       "block.pig_basemod.platinum_ore": "Platinum Ore",
+      "effect.pig_basemod.green_infection": "Green Infection",
       "item.pig_basemod.triplane_spawn_egg": "Triplane Spawn Egg",
       "item_group.pig_basemod.pig_items": "P!G_Items",
       "item.pig_basemod.sword_sharp": "Sword Sharp",
@@ -980,6 +1085,7 @@
       "block.pig_basemod.danchi_slab": "Danchi slab",
       "block.pig_basemod.infected_log": "Infected Block",
       "subtitles.minionambient": "",
+      "item.pig_basemod.circuit": "Circuit",
       "subtitles.miniondie": ""
     }
   },
@@ -1036,6 +1142,15 @@
       {
         "name": "Crafts",
         "children": []
+      },
+      {
+        "name": "Pigdustrial",
+        "children": [
+          {
+            "name": "Blocks",
+            "children": []
+          }
+        ]
       }
     ]
   },

@@ -48,6 +48,7 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> PLATINUM_ORE = block(PigBasemodModBlocks.PLATINUM_ORE);
 	public static final RegistryObject<Item> PLATINUM = REGISTRY.register("platinum", () -> new PlatinumItem());
 	public static final RegistryObject<Item> CIRCUIT = REGISTRY.register("circuit", () -> new CircuitItem());
+	public static final RegistryObject<Item> FOSSIL_ORE_SAND = block(PigBasemodModBlocks.FOSSIL_ORE_SAND);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 45,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "tag_match",
+          "tag": "minecraft:mineable/shovel"
+        },
+        "state": {
+          "Name": "pig_basemod:fossil_ore_sand"
+        }
+      }
+    ]
+  }
+}
