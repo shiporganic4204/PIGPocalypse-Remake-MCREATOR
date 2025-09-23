@@ -20,6 +20,7 @@ import net.mcreator.pigbasemod.item.PlatinumItem;
 import net.mcreator.pigbasemod.item.IndusiumItem;
 import net.mcreator.pigbasemod.item.GreenPorkchopItem;
 import net.mcreator.pigbasemod.item.FossilItem;
+import net.mcreator.pigbasemod.item.CircuitItem;
 import net.mcreator.pigbasemod.block.display.InfectionCoreDisplayItem;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
@@ -46,6 +47,7 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> SHARP_BLADE = REGISTRY.register("sharp_blade", () -> new SharpBladeItem());
 	public static final RegistryObject<Item> PLATINUM_ORE = block(PigBasemodModBlocks.PLATINUM_ORE);
 	public static final RegistryObject<Item> PLATINUM = REGISTRY.register("platinum", () -> new PlatinumItem());
+	public static final RegistryObject<Item> CIRCUIT = REGISTRY.register("circuit", () -> new CircuitItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

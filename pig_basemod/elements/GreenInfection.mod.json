@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Green Infection",
+    "icon": "pig_virus",
+    "color": {
+      "value": -13408768,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "GreenInfectionEffestApplied"
+    },
+    "onActiveTick": {
+      "name": "GreenInfectionOnEffectTick"
+    }
+  }
+}
