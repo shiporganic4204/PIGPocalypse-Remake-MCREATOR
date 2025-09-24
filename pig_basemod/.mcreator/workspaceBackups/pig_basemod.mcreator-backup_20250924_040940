@@ -399,11 +399,11 @@
       "registry_name": "danchi_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
-          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
           "src/main/resources/assets/pig_basemod/blockstates/danchi_block.json",
-          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json",
-          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json"
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -675,8 +675,8 @@
         "files": [
           "src/main/java/net/mcreator/pigbasemod/item/renderer/SwordSharpItemRenderer.java",
           "src/main/resources/assets/pig_basemod/models/item/sword_sharp.json",
-          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java",
-          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java"
+          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java",
+          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java"
         ]
       },
       "path": "~/Items"
@@ -955,6 +955,26 @@
         ]
       },
       "path": "~/Effects/Viruses"
+    },
+    {
+      "name": "FossilOreSand",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fossil_ore_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pig_basemod/models/block/fossil_ore_sand.json",
+          "src/main/resources/data/pig_basemod/worldgen/placed_feature/fossil_ore_sand.json",
+          "src/main/java/net/mcreator/pigbasemod/block/FossilOreSandBlock.java",
+          "src/main/resources/data/pig_basemod/worldgen/configured_feature/fossil_ore_sand.json",
+          "src/main/resources/assets/pig_basemod/models/item/fossil_ore_sand.json",
+          "src/main/resources/data/pig_basemod/forge/biome_modifier/fossil_ore_sand_biome_modifier.json",
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/fossil_ore_sand.json",
+          "src/main/resources/assets/pig_basemod/blockstates/fossil_ore_sand.json"
+        ]
+      },
+      "path": "~/Resources/Blocks"
     }
   ],
   "variable_elements": [],
@@ -997,12 +1017,14 @@
       "~CUSTOM:InfectedLeaves"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:FossilOreSand",
       "~CUSTOM:FossilOre"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:PlatinumOre"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:FossilOreSand",
       "~CUSTOM:PlatinumOre",
       "~CUSTOM:FossilOre",
       "~CUSTOM:DanchiWall",
@@ -1035,6 +1057,7 @@
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "block.pig_basemod.infected_grass": "Infected Grass",
+      "block.pig_basemod.fossil_ore_sand": "Fossil Ore",
       "block.pig_basemod.danchi_wall": "Danchi wall",
       "block.pig_basemod.infectedfountain": "Infectedfountain",
       "block.pig_basemod.infected_leaves": "Infected Block",
@@ -1119,6 +1142,15 @@
       {
         "name": "Crafts",
         "children": []
+      },
+      {
+        "name": "Pigdustrial",
+        "children": [
+          {
+            "name": "Blocks",
+            "children": []
+          }
+        ]
       }
     ]
   },

@@ -10,10 +10,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
@@ -24,6 +27,7 @@ public class SwordSharpLivingEntityIsHitWithItemProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (!(sourceentity instanceof Player _plrCldCheck1 && _plrCldCheck1.getCooldowns().isOnCooldown((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()))) {
+			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)), 25);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 70, 1, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -32,15 +36,18 @@ public class SwordSharpLivingEntityIsHitWithItemProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 50, 1, false, false));
 			if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 15, 1, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 15, 2, false, false));
+			sourceentity.fallDistance = 0;
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.MASTER, 3, (float) 1.5);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.MASTER, 3, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.MASTER, 3, (float) 1.5, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.MASTER, 3, 1, false);
 				}
 			}
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 50, 1, 1, 1, 0.4);
+				_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 100, 2, 2, 2, 0.4);
 			if (sourceentity instanceof Player _player)
 				_player.getCooldowns().addCooldown((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 150);
 			if (sourceentity instanceof LivingEntity _entity) {

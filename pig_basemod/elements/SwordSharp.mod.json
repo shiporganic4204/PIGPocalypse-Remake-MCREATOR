@@ -29,10 +29,12 @@
     "stayInGridWhenCrafting": false,
     "enableArmPose": true,
     "damageOnCrafting": false,
-    "enableMeleeDamage": true,
+    "enableMeleeDamage": false,
     "damageVsEntity": 25.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Damage: 25, single use"
+      ]
     },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

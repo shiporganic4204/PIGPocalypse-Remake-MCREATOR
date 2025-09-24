@@ -1,219 +1,285 @@
 {
   "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
-      "unlock_right_away": "2025-09-21 23:27:42 +0100"
+      "unlock_right_away": "2025-09-22 01:27:42 +0300"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2025-09-22 01:05:36 +0100",
-      "minecraft:old_growth_birch_forest": "2025-09-21 23:27:44 +0100"
+      "minecraft:forest": "2025-09-22 03:05:36 +0300",
+      "minecraft:old_growth_birch_forest": "2025-09-22 01:27:44 +0300"
     },
     "done": false
   },
   "minecraft:adventure/root": {
     "criteria": {
-      "killed_something": "2025-09-22 00:49:17 +0100"
+      "killed_something": "2025-09-22 02:49:17 +0300"
     },
     "done": true
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
-      "minecraft:skeleton": "2025-09-22 00:49:17 +0100",
-      "minecraft:creeper": "2025-09-22 01:36:52 +0100"
+      "minecraft:skeleton": "2025-09-22 02:49:17 +0300",
+      "minecraft:creeper": "2025-09-22 03:36:52 +0300"
     },
     "done": false
   },
   "minecraft:adventure/kill_a_mob": {
     "criteria": {
-      "minecraft:skeleton": "2025-09-22 00:49:17 +0100"
+      "minecraft:skeleton": "2025-09-22 02:49:17 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_porkchop": {
     "criteria": {
-      "has_porkchop": "2025-09-22 01:05:14 +0100"
+      "has_porkchop": "2025-09-22 03:05:14 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
     "criteria": {
-      "has_porkchop": "2025-09-22 01:05:14 +0100"
+      "has_porkchop": "2025-09-22 03:05:14 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_porkchop_from_smoking": {
     "criteria": {
-      "has_porkchop": "2025-09-22 01:05:14 +0100"
+      "has_porkchop": "2025-09-22 03:05:14 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_beef_from_smoking": {
     "criteria": {
-      "has_beef": "2025-09-22 01:05:26 +0100"
+      "has_beef": "2025-09-22 03:05:26 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_beef": {
     "criteria": {
-      "has_beef": "2025-09-22 01:05:26 +0100"
+      "has_beef": "2025-09-22 03:05:26 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_beef_from_campfire_cooking": {
     "criteria": {
-      "has_beef": "2025-09-22 01:05:26 +0100"
+      "has_beef": "2025-09-22 03:05:26 +0300"
     },
     "done": true
   },
   "minecraft:recipes/combat/leather_helmet": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/combat/leather_leggings": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/item_frame": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/combat/leather_chestplate": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/combat/leather_boots": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/misc/leather_horse_armor": {
     "criteria": {
-      "has_leather": "2025-09-22 01:05:27 +0100"
+      "has_leather": "2025-09-22 03:05:27 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_chicken_from_campfire_cooking": {
     "criteria": {
-      "has_chicken": "2025-09-22 01:05:31 +0100"
+      "has_chicken": "2025-09-22 03:05:31 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_chicken": {
     "criteria": {
-      "has_chicken": "2025-09-22 01:05:31 +0100"
+      "has_chicken": "2025-09-22 03:05:31 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_chicken_from_smoking": {
     "criteria": {
-      "has_chicken": "2025-09-22 01:05:31 +0100"
+      "has_chicken": "2025-09-22 03:05:31 +0300"
     },
     "done": true
   },
   "minecraft:recipes/combat/arrow": {
     "criteria": {
-      "has_feather": "2025-09-22 01:05:31 +0100"
+      "has_feather": "2025-09-22 03:05:31 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/chest": {
     "criteria": {
-      "has_lots_of_items": "2025-09-22 01:05:31 +0100"
+      "has_lots_of_items": "2025-09-22 03:05:31 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_mutton_from_smoking": {
     "criteria": {
-      "has_mutton": "2025-09-22 01:05:37 +0100"
+      "has_mutton": "2025-09-22 03:05:37 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_mutton": {
     "criteria": {
-      "has_mutton": "2025-09-22 01:05:37 +0100"
+      "has_mutton": "2025-09-22 03:05:37 +0300"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_mutton_from_campfire_cooking": {
     "criteria": {
-      "has_mutton": "2025-09-22 01:05:37 +0100"
+      "has_mutton": "2025-09-22 03:05:37 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/white_banner": {
     "criteria": {
-      "has_white_wool": "2025-09-22 01:05:41 +0100"
+      "has_white_wool": "2025-09-22 03:05:41 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/painting": {
     "criteria": {
-      "has_wool": "2025-09-22 01:05:41 +0100"
+      "has_wool": "2025-09-22 03:05:41 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/white_bed": {
     "criteria": {
-      "has_white_wool": "2025-09-22 01:05:41 +0100"
+      "has_white_wool": "2025-09-22 03:05:41 +0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/white_carpet": {
     "criteria": {
-      "has_white_wool": "2025-09-22 01:05:41 +0100"
+      "has_white_wool": "2025-09-22 03:05:41 +0300"
     },
     "done": true
   },
   "minecraft:recipes/misc/firework_rocket_simple": {
     "criteria": {
-      "has_gunpowder": "2025-09-22 01:36:53 +0100"
+      "has_gunpowder": "2025-09-22 03:36:53 +0300"
     },
     "done": true
   },
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
-      "has_gunpowder": "2025-09-22 01:36:53 +0100"
+      "has_gunpowder": "2025-09-22 03:36:53 +0300"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/birch_planks": {
     "criteria": {
-      "has_logs": "2025-09-22 14:37:07 +0100"
+      "has_logs": "2025-09-22 16:37:07 +0300"
     },
     "done": true
   },
   "minecraft:recipes/misc/charcoal": {
     "criteria": {
-      "has_log": "2025-09-22 14:37:07 +0100"
+      "has_log": "2025-09-22 16:37:07 +0300"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/birch_wood": {
     "criteria": {
-      "has_log": "2025-09-22 14:37:07 +0100"
+      "has_log": "2025-09-22 16:37:07 +0300"
     },
     "done": true
   },
   "minecraft:recipes/misc/bone_meal": {
     "criteria": {
-      "has_bone": "2025-09-22 14:47:10 +0100"
+      "has_bone": "2025-09-22 16:47:10 +0300"
     },
     "done": true
   },
   "minecraft:adventure/throw_trident": {
     "criteria": {
-      "shot_trident": "2025-09-22 14:59:58 +0100"
+      "shot_trident": "2025-09-22 16:59:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_trapdoor": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jungle_sign": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_door": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jungle_fence": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_pressure_plate": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_button": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_slab": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_stairs": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/jungle_fence_gate": {
+    "criteria": {
+      "has_planks": "2025-09-24 04:05:26 +0300"
     },
     "done": true
   },

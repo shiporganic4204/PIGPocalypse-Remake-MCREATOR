@@ -399,11 +399,11 @@
       "registry_name": "danchi_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
-          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
           "src/main/resources/assets/pig_basemod/blockstates/danchi_block.json",
-          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json",
-          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json"
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/danchi_block.json",
+          "src/main/resources/assets/pig_basemod/models/item/danchi_block.json",
+          "src/main/java/net/mcreator/pigbasemod/block/DanchiBlockBlock.java",
+          "src/main/resources/assets/pig_basemod/models/block/danchi_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -675,8 +675,8 @@
         "files": [
           "src/main/java/net/mcreator/pigbasemod/item/renderer/SwordSharpItemRenderer.java",
           "src/main/resources/assets/pig_basemod/models/item/sword_sharp.json",
-          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java",
-          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java"
+          "src/main/java/net/mcreator/pigbasemod/item/model/SwordSharpItemModel.java",
+          "src/main/java/net/mcreator/pigbasemod/item/SwordSharpItem.java"
         ]
       },
       "path": "~/Items"
@@ -975,6 +975,25 @@
         ]
       },
       "path": "~/Resources/Blocks"
+    },
+    {
+      "name": "SwordSharpItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_sharp_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/SwordSharpItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [],
