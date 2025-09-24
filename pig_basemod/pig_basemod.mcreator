@@ -977,19 +977,6 @@
       "path": "~/Resources/Blocks"
     },
     {
-      "name": "CRAMPROCEDURE",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cramprocedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/pigbasemod/procedures/CRAMPROCEDUREProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "AntiAirPrototype",
       "type": "block",
       "compiles": true,
