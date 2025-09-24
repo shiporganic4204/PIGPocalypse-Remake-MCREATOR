@@ -24,6 +24,7 @@ import net.mcreator.pigbasemod.block.DanchiWallBlock;
 import net.mcreator.pigbasemod.block.DanchiStairsBlock;
 import net.mcreator.pigbasemod.block.DanchiSlabBlock;
 import net.mcreator.pigbasemod.block.DanchiBlockBlock;
+import net.mcreator.pigbasemod.block.AntiAirPrototypeBlock;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 public class PigBasemodModBlocks {
@@ -42,6 +43,7 @@ public class PigBasemodModBlocks {
 	public static final RegistryObject<Block> FOSSIL_ORE = REGISTRY.register("fossil_ore", () -> new FossilOreBlock());
 	public static final RegistryObject<Block> PLATINUM_ORE = REGISTRY.register("platinum_ore", () -> new PlatinumOreBlock());
 	public static final RegistryObject<Block> FOSSIL_ORE_SAND = REGISTRY.register("fossil_ore_sand", () -> new FossilOreSandBlock());
+	public static final RegistryObject<Block> ANTI_AIR_PROTOTYPE = REGISTRY.register("anti_air_prototype", () -> new AntiAirPrototypeBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

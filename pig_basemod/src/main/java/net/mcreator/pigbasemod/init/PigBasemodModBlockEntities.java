@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.pigbasemod.block.entity.InfectorBlockEntity;
 import net.mcreator.pigbasemod.block.entity.InfectionCoreTileEntity;
 import net.mcreator.pigbasemod.block.entity.InfectedfountainBlockEntity;
+import net.mcreator.pigbasemod.block.entity.AntiAirPrototypeBlockEntity;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 public class PigBasemodModBlockEntities {
@@ -22,6 +23,7 @@ public class PigBasemodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> INFECTOR = register("infector", PigBasemodModBlocks.INFECTOR, InfectorBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<InfectionCoreTileEntity>> INFECTION_CORE = REGISTRY.register("infection_core",
 			() -> BlockEntityType.Builder.of(InfectionCoreTileEntity::new, PigBasemodModBlocks.INFECTION_CORE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<?>> ANTI_AIR_PROTOTYPE = register("anti_air_prototype", PigBasemodModBlocks.ANTI_AIR_PROTOTYPE, AntiAirPrototypeBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
