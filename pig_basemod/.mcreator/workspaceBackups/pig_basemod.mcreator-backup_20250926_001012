@@ -977,17 +977,53 @@
       "path": "~/Resources/Blocks"
     },
     {
-      "name": "CRAMPROCEDURE",
+      "name": "AntiAirPrototype",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anti_air_prototype",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/anti_air_prototype.json",
+          "src/main/java/net/mcreator/pigbasemod/block/AntiAirPrototypeBlock.java",
+          "src/main/java/net/mcreator/pigbasemod/block/entity/AntiAirPrototypeBlockEntity.java",
+          "src/main/resources/assets/pig_basemod/models/block/anti_air_prototype.json",
+          "src/main/resources/assets/pig_basemod/blockstates/anti_air_prototype.json",
+          "src/main/resources/assets/pig_basemod/models/item/anti_air_prototype.json"
+        ]
+      },
+      "path": "~/Pigdustrial"
+    },
+    {
+      "name": "AntiAirPrototypeOnTickUpdate",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cramprocedure",
+      "registry_name": "anti_air_prototype_on_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/pigbasemod/procedures/CRAMPROCEDUREProcedure.java"
+          "src/main/java/net/mcreator/pigbasemod/procedures/AntiAirPrototypeOnTickUpdateProcedure.java"
         ],
-        "dependencies": []
-      }
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Pigdustrial"
     }
   ],
   "variable_elements": [],
@@ -1080,6 +1116,7 @@
       "effect.pig_basemod.green_infection": "Green Infection",
       "item.pig_basemod.triplane_spawn_egg": "Triplane Spawn Egg",
       "item_group.pig_basemod.pig_items": "P!G_Items",
+      "block.pig_basemod.anti_air_prototype": "Anti Air Prototype",
       "item.pig_basemod.sword_sharp": "Sword Sharp",
       "block.pig_basemod.fossil_ore": "Fossil Ore",
       "item.pig_basemod.sword_base": "Sword Base",
