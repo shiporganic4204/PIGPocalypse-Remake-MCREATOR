@@ -1,0 +1,49 @@
+{
+  "mod_elements": [
+    {
+      "name": "TST",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "tst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/worldrender/procedures/TSTProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "worldrender",
+    "modName": "worldrender",
+    "version": "1.0.0",
+    "author": "tntmi, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.worldrender"
+  },
+  "mcreatorVersion": 202400452410
+}

@@ -977,14 +977,32 @@
       "path": "~/Resources/Blocks"
     },
     {
-      "name": "CRAMPROCEDURE",
+      "name": "AntiAirPrototype",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anti_air_prototype",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pig_basemod/loot_tables/blocks/anti_air_prototype.json",
+          "src/main/java/net/mcreator/pigbasemod/block/AntiAirPrototypeBlock.java",
+          "src/main/java/net/mcreator/pigbasemod/block/entity/AntiAirPrototypeBlockEntity.java",
+          "src/main/resources/assets/pig_basemod/models/block/anti_air_prototype.json",
+          "src/main/resources/assets/pig_basemod/blockstates/anti_air_prototype.json",
+          "src/main/resources/assets/pig_basemod/models/item/anti_air_prototype.json"
+        ]
+      },
+      "path": "~/Pigdustrial"
+    },
+    {
+      "name": "AntiAirPrototypeOnTickUpdate",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cramprocedure",
+      "registry_name": "anti_air_prototype_on_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/pigbasemod/procedures/CRAMPROCEDUREProcedure.java"
+          "src/main/java/net/mcreator/pigbasemod/procedures/AntiAirPrototypeOnTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -1003,23 +1021,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "AntiAirPrototype",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "anti_air_prototype",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/pig_basemod/loot_tables/blocks/anti_air_prototype.json",
-          "src/main/java/net/mcreator/pigbasemod/block/AntiAirPrototypeBlock.java",
-          "src/main/java/net/mcreator/pigbasemod/block/entity/AntiAirPrototypeBlockEntity.java",
-          "src/main/resources/assets/pig_basemod/models/block/anti_air_prototype.json",
-          "src/main/resources/assets/pig_basemod/blockstates/anti_air_prototype.json",
-          "src/main/resources/assets/pig_basemod/models/item/anti_air_prototype.json"
         ]
       },
       "path": "~/Pigdustrial"
