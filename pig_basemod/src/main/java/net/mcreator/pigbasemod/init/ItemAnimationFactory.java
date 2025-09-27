@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.mcreator.pigbasemod.item.SwordSharpItem;
 import net.mcreator.pigbasemod.item.SwordBaseItem;
 import net.mcreator.pigbasemod.item.SharpBladeItem;
+import net.mcreator.pigbasemod.item.Rifle1Item;
 
 @Mod.EventBusSubscriber
 public class ItemAnimationFactory {
@@ -71,6 +72,24 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((SharpBladeItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof Rifle1Item animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((Rifle1Item) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof Rifle1Item animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((Rifle1Item) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 					}
 				}
 			}

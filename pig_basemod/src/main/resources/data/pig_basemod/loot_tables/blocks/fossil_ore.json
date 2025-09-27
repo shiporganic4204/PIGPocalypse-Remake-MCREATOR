@@ -1,20 +1,28 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "pig_basemod:blocks/fossil_ore",
   "pools": [
     {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pig_basemod:fossil_ore"
+          "name": "pig_basemod:fossil",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "pig_basemod:blocks/fossil_ore"
 }

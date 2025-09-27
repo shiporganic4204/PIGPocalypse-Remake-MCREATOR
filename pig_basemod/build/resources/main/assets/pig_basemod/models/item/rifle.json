@@ -1,0 +1,6 @@
+{
+  "parent": "pig_basemod:displaysettings/vgolovu",
+  "textures": {
+    "layer0": "pig_basemod:item/textur1"
+  }
+}
