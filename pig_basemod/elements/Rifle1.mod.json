@@ -41,6 +41,9 @@
     "onRightClickedInAir": {
       "name": "Rifle1Rightclicked"
     },
+    "onItemInInventoryTick": {
+      "name": "Rifle1ItemInInventoryTick"
+    },
     "onItemInUseTick": {
       "name": "Rifle1ItemInHandTick"
     },

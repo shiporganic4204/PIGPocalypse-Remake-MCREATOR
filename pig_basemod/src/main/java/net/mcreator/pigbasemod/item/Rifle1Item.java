@@ -26,6 +26,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.player.LocalPlayer;
 
 import net.mcreator.pigbasemod.procedures.Rifle1RightclickedProcedure;
+import net.mcreator.pigbasemod.procedures.Rifle1ItemInInventoryTickProcedure;
 import net.mcreator.pigbasemod.procedures.Rifle1ItemInHandTickProcedure;
 import net.mcreator.pigbasemod.procedures.Rifle1EntitySwingsItemProcedure;
 import net.mcreator.pigbasemod.item.renderer.Rifle1ItemRenderer;
@@ -133,5 +134,6 @@ public class Rifle1Item extends Item implements GeoItem {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
 			Rifle1ItemInHandTickProcedure.execute(entity);
+		Rifle1ItemInInventoryTickProcedure.execute(entity);
 	}
 }

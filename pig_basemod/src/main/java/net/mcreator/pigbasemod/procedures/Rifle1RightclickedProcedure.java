@@ -99,7 +99,7 @@ public class Rifle1RightclickedProcedure {
 													.getBlockPos().getY(),
 											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 													.getBlockPos().getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5);
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.hit")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5);
 						} else {
 							_level.playLocalSound(
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
@@ -108,7 +108,7 @@ public class Rifle1RightclickedProcedure {
 											.getBlockPos().getY()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 											.getBlockPos().getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5, false);
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.hit")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5, false);
 						}
 					}
 					if (world instanceof ServerLevel _level)
@@ -142,7 +142,7 @@ public class Rifle1RightclickedProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)),
-										(float) (5 + Math.pow(entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1.3)));
+										(float) (5 + Math.pow(entityiterator instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1.3)));
 								if (entity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal("\u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0435"), true);
 							}
@@ -183,7 +183,7 @@ public class Rifle1RightclickedProcedure {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof Rifle1Item)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "vgolovu");
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 100);
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 80);
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("\u043F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430..."), true);
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("ammo", 1);
