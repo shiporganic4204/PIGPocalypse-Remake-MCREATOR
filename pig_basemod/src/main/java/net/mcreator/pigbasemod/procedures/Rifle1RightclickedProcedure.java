@@ -40,15 +40,12 @@ public class Rifle1RightclickedProcedure {
 		double raytrace_distance = 0;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("ammo") > 0
 				&& (entity instanceof Player _plrCldRem3 ? _plrCldRem3.getCooldowns().getCooldownPercent((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 0f) * 100 : 0) == 0) {
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:flash ~ ~2 ~ 0.2 0.2 0.2 0 1 force");
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 10);
 			{
 				Entity _ent = entity;
-				_ent.setYRot((float) (entity.getYRot() - Mth.nextInt(RandomSource.create(), -4, 4)));
-				_ent.setXRot((float) (entity.getXRot() - Mth.nextInt(RandomSource.create(), 5, 8)));
+				_ent.setYRot((float) (entity.getYRot() - Mth.nextInt(RandomSource.create(), (int) ((-4) - (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")),
+						(int) (4 + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")))));
+				_ent.setXRot((float) (entity.getXRot() - Mth.nextInt(RandomSource.create(), (int) ((-4) - (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")),
+						(int) (4 + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")))));
 				_ent.setYBodyRot(_ent.getYRot());
 				_ent.setYHeadRot(_ent.getYRot());
 				_ent.yRotO = _ent.getYRot();
@@ -58,12 +55,17 @@ public class Rifle1RightclickedProcedure {
 					_entity.yHeadRotO = _entity.getYRot();
 				}
 			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:flash ~ ~2 ~ 0.2 0.2 0.2 0 1 force");
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 10);
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("ammo", 0);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, 3, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 3, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, 3, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 3, 1, false);
 				}
 			}
 			for (int index0 = 0; index0 < 10; index0++) {
@@ -75,7 +77,7 @@ public class Rifle1RightclickedProcedure {
 						(Math.sin(Math.toRadians(0 - (entity.getXRot() + Mth.nextInt(RandomSource.create(), -10, 10)))) * 1), ((Math.cos(Math.toRadians(entity.getYRot() + Mth.nextInt(RandomSource.create(), -10, 10))) * 1) / 2));
 			}
 			raytrace_distance = 1;
-			for (int index2 = 0; index2 < 60; index2++) {
+			for (int index2 = 0; index2 < 100; index2++) {
 				if (!world.getBlockState(new BlockPos(
 						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos()
 								.getX(),
@@ -83,7 +85,7 @@ public class Rifle1RightclickedProcedure {
 								.getY(),
 						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos()
 								.getZ()))
-						.canOcclude() || raytrace_distance < 60) {
+						.canOcclude() || raytrace_distance < 100) {
 					raytrace_distance = raytrace_distance + 1;
 					world.addParticle(ParticleTypes.FLAME, x, (y + 1.5), z, ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2), ((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 1.7),
 							((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
@@ -97,7 +99,7 @@ public class Rifle1RightclickedProcedure {
 													.getBlockPos().getY(),
 											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 													.getBlockPos().getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 0.4);
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5);
 						} else {
 							_level.playLocalSound(
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
@@ -106,9 +108,28 @@ public class Rifle1RightclickedProcedure {
 											.getBlockPos().getY()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 											.getBlockPos().getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 0.4, false);
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("pig_basemod:bzdin")), SoundSource.NEUTRAL, (float) 0.2, (float) 1.5, false);
 						}
 					}
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands()
+								.performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL,
+												new Vec3(
+														(entity.level()
+																.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																		entity))
+																.getBlockPos().getX()),
+														(entity.level()
+																.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																		entity))
+																.getBlockPos().getY()),
+														(entity.level()
+																.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																		entity))
+																.getBlockPos().getZ())),
+												Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+										"particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.2 0.2 0.2 0 2 force");
 					{
 						final Vec3 _center = new Vec3(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
@@ -120,20 +141,26 @@ public class Rifle1RightclickedProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
-								if (Math.random() < (5 - (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")) / ((float) 10) == true) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)), 5);
-									if (entity instanceof Player _player && !_player.level().isClientSide())
-										_player.displayClientMessage(Component.literal("\u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0435"), true);
-								} else {
-									if (entity instanceof Player _player && !_player.level().isClientSide())
-										_player.displayClientMessage(
-												Component.literal(("\u043F\u0440\u043E\u043C\u0430\u0445 ( \u0434\u043E\u043F. \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u0430\u0445\u0430 - "
-														+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy")) + ")")),
-												true);
-								}
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_ANVIL)),
+										(float) (5 + Math.pow(entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1.3)));
+								if (entity instanceof Player _player && !_player.level().isClientSide())
+									_player.displayClientMessage(Component.literal("\u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0435"), true);
 							}
 						}
 					}
+				}
+			}
+			{
+				Entity _ent = entity;
+				_ent.setYRot((float) (entity.getYRot() - Mth.nextInt(RandomSource.create(), -7, 7)));
+				_ent.setXRot((float) (entity.getXRot() - Mth.nextInt(RandomSource.create(), 8, 12)));
+				_ent.setYBodyRot(_ent.getYRot());
+				_ent.setYHeadRot(_ent.getYRot());
+				_ent.yRotO = _ent.getYRot();
+				_ent.xRotO = _ent.getXRot();
+				if (_ent instanceof LivingEntity _entity) {
+					_entity.yBodyRotO = _entity.getYRot();
+					_entity.yHeadRotO = _entity.getYRot();
 				}
 			}
 			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.GUNPOWDER)) : false) {

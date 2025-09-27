@@ -1028,7 +1028,7 @@
     {
       "name": "Rifle1",
       "type": "animateditem",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "rifle",
       "metadata": {

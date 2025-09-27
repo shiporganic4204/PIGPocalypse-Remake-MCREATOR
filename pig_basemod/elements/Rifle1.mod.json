@@ -44,6 +44,9 @@
     "onItemInUseTick": {
       "name": "Rifle1ItemInHandTick"
     },
+    "onEntitySwing": {
+      "name": "Rifle1EntitySwingsItem"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

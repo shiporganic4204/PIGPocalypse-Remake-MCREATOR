@@ -1028,7 +1028,7 @@
     {
       "name": "Rifle1",
       "type": "animateditem",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "rifle",
       "metadata": {
@@ -1070,6 +1070,42 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rifle1ItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rifle_1_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/Rifle1ItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rifle1EntitySwingsItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rifle_1_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/Rifle1EntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       }

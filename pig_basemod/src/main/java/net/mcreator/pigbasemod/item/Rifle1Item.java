@@ -17,6 +17,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
@@ -26,6 +27,7 @@ import net.minecraft.client.player.LocalPlayer;
 
 import net.mcreator.pigbasemod.procedures.Rifle1RightclickedProcedure;
 import net.mcreator.pigbasemod.procedures.Rifle1ItemInHandTickProcedure;
+import net.mcreator.pigbasemod.procedures.Rifle1EntitySwingsItemProcedure;
 import net.mcreator.pigbasemod.item.renderer.Rifle1ItemRenderer;
 
 import java.util.function.Consumer;
@@ -117,6 +119,13 @@ public class Rifle1Item extends Item implements GeoItem {
 
 		Rifle1RightclickedProcedure.execute(world, x, y, z, entity);
 		return ar;
+	}
+
+	@Override
+	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
+		boolean retval = super.onEntitySwing(itemstack, entity);
+		Rifle1EntitySwingsItemProcedure.execute(entity);
+		return retval;
 	}
 
 	@Override
