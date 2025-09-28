@@ -116,7 +116,7 @@ public class SwordSharpItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Damage: 25, single use"));
+		list.add(Component.literal("Damage: 18, single use"));
 	}
 
 	@Override

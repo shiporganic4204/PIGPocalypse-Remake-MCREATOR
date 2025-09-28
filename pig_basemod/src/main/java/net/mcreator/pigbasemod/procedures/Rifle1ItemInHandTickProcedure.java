@@ -25,11 +25,11 @@ public class Rifle1ItemInHandTickProcedure {
 					Math.round(Math.pow(10, 2) * ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("accuracy") + 0.8)) / Math.pow(10, 2));
 		} else if (entity.getDeltaMovement().y() < 0) {
 			if (!(entity.fallDistance > 1)) {
-				Vec3 motion = entity.getDeltaMovement().scale(0.85);
+				Vec3 motion = entity.getDeltaMovement().scale(0.9);
 				entity.setDeltaMovement(motion);
 			}
 		} else {
-			Vec3 motion = entity.getDeltaMovement().scale(0.7);
+			Vec3 motion = entity.getDeltaMovement().scale(0.9);
 			entity.setDeltaMovement(motion);
 		}
 	}
