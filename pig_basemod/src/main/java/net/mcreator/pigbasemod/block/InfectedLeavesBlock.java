@@ -10,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class InfectedLeavesBlock extends LeavesBlock {
 	public InfectedLeavesBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(2f, 10f).noCollission().friction(0.8f).speedFactor(0.9f).noOcclusion());
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(2f, 10f).friction(0.8f).speedFactor(0.9f).noOcclusion());
 	}
 
 	@Override

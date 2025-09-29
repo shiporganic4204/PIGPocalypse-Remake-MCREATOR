@@ -41,7 +41,7 @@ public class InfectionCoreBlock extends BaseEntityBlock implements EntityBlock {
 	public InfectionCoreBlock() {
 		super(BlockBehaviour.Properties.of()
 
-				.sound(SoundType.WEEPING_VINES).strength(10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+				.sound(SoundType.WEEPING_VINES).strength(10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
