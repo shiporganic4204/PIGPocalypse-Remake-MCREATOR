@@ -3,7 +3,7 @@
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
-    "texture": "textur1",
+    "texture": "texturesdafagggs",
     "name": "Rifle",
     "idle": "idle",
     "rarity": "COMMON",
@@ -27,7 +27,7 @@
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
-    "enableArmPose": false,
+    "enableArmPose": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
@@ -60,7 +60,64 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "normal": "vgolovu.geo.json",
-    "armPoseList": [],
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": -0.5,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": -1.6,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": -1.6,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.8,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "Z",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Z",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      }
+    ],
     "disableSwing": true
   }
 }

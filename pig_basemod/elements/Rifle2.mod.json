@@ -1,0 +1,123 @@
+{
+  "_fv": 73,
+  "_type": "animateditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "textura",
+    "name": "Rifle 2",
+    "idle": "idle",
+    "rarity": "UNCOMMON",
+    "displaySettings": "pulyala.json",
+    "leftArm": "",
+    "rightArm": "",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:PIGWarfare"
+      }
+    ],
+    "firstPersonArms": false,
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "enableArmPose": true,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "Rifle2rightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "Rifle2ItemInInv"
+    },
+    "onItemInUseTick": {
+      "name": "Rifle2ItemInHand"
+    },
+    "onEntitySwing": {
+      "name": "Rifle2EntitySwings"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "normal": "pulyala.geo.json",
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": -0.5,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": -1.6,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": -1.6,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.8,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "LEFT",
+        "angle": "Z",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Z",
+        "rotation": 0.0,
+        "swings": false,
+        "followsHead": true
+      }
+    ],
+    "disableSwing": true
+  }
+}

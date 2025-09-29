@@ -82,7 +82,7 @@ public class Rifle1RightclickedProcedure {
 						(Math.sin(Math.toRadians(0 - (entity.getXRot() + Mth.nextInt(RandomSource.create(), -10, 10)))) * 1), ((Math.cos(Math.toRadians(entity.getYRot() + Mth.nextInt(RandomSource.create(), -10, 10))) * 1) / 2));
 			}
 			raytrace_distance = 1;
-			for (int index2 = 0; index2 < 100; index2++) {
+			for (int index2 = 0; index2 < 50; index2++) {
 				if ((world.getBlockState(new BlockPos(
 						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos()
 								.getX(),
@@ -107,7 +107,7 @@ public class Rifle1RightclickedProcedure {
 								.getY(),
 						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos()
 								.getZ()))
-						.canOcclude() || raytrace_distance < 100) {
+						.canOcclude() || raytrace_distance < 50) {
 					raytrace_distance = raytrace_distance + 1;
 				}
 				if (world instanceof Level _level) {
@@ -163,7 +163,7 @@ public class Rifle1RightclickedProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
-									(float) ((8 + Math.pow(entityiterator instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1.1) / 3)
+									(float) ((10 + Math.pow(entityiterator instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1.4) / 6)
 											- (entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getOrCreateTag().getDouble("bresistance")));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2));
@@ -202,7 +202,7 @@ public class Rifle1RightclickedProcedure {
 				});
 			}
 		} else {
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.GUNPOWDER)) : false) {
+			if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.GUNPOWDER)) : false) && entity.onGround()) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof Rifle1Item)
 					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("geckoAnim", "vgolovu");
 				if (entity instanceof Player _player)

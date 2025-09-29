@@ -24,6 +24,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.pigbasemod.procedures.Rifle1RightclickedProcedure;
 import net.mcreator.pigbasemod.procedures.Rifle1ItemInInventoryTickProcedure;
@@ -57,6 +58,29 @@ public class Rifle1Item extends Item implements GeoItem {
 			@Override
 			public BlockEntityWithoutLevelRenderer getCustomRenderer() {
 				return renderer;
+			}
+
+			private static final HumanoidModel.ArmPose Rifle1Pose = HumanoidModel.ArmPose.create("Rifle1", false, (model, entity, arm) -> {
+				if (arm == HumanoidArm.LEFT) {
+					model.leftArm.xRot = -0.5F + model.head.xRot;
+				} else {
+					model.rightArm.xRot = -1.6F + model.head.xRot;
+					model.leftArm.xRot = -1.6F + model.head.xRot;
+					model.rightArm.yRot = 0F + model.head.yRot;
+					model.leftArm.yRot = 0.8F + model.head.yRot;
+					model.leftArm.zRot = 0F + model.head.zRot;
+					model.rightArm.zRot = 0F + model.head.zRot;
+				}
+			});
+
+			@Override
+			public HumanoidModel.ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
+				if (!itemStack.isEmpty()) {
+					if (entityLiving.getUsedItemHand() == hand) {
+						return Rifle1Pose;
+					}
+				}
+				return HumanoidModel.ArmPose.EMPTY;
 			}
 
 			public boolean applyForgeHandTransform(PoseStack poseStack, LocalPlayer player, HumanoidArm arm, ItemStack itemInHand, float partialTick, float equipProcess, float swingProcess) {

@@ -19,6 +19,6 @@ public class Rifle1ItemModel extends GeoModel<Rifle1Item> {
 
 	@Override
 	public ResourceLocation getTextureResource(Rifle1Item animatable) {
-		return new ResourceLocation("pig_basemod", "textures/item/textur1.png");
+		return new ResourceLocation("pig_basemod", "textures/item/texturesdafagggs.png");
 	}
 }
