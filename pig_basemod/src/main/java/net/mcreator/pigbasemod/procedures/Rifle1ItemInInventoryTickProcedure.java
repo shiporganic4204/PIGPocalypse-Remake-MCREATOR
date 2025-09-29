@@ -12,11 +12,9 @@ public class Rifle1ItemInInventoryTickProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) > 15) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2));
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 3));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 3));
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, 1));
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) > 8) {
 			if (entity.getDeltaMovement().y() > 0) {
 			} else if (entity.getDeltaMovement().y() < 0) {
