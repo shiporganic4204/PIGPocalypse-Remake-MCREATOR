@@ -33,6 +33,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.pigbasemod.item.Rifle1Item;
+import net.mcreator.pigbasemod.init.PigBasemodModItems;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
 import java.util.List;
@@ -64,7 +65,9 @@ public class Rifle1RightclickedProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle minecraft:flash ~ ~2 ~ 0.2 0.2 0.2 0 1 force");
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 10);
+				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 30);
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(PigBasemodModItems.RIFLEBOLT.get(), 50);
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("ammo", 0);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {

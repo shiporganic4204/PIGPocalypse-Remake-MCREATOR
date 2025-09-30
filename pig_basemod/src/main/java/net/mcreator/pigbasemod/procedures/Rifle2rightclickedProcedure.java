@@ -33,6 +33,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.pigbasemod.item.Rifle2Item;
+import net.mcreator.pigbasemod.init.PigBasemodModItems;
 
 import java.util.List;
 import java.util.Comparator;
@@ -64,6 +65,8 @@ public class Rifle2rightclickedProcedure {
 						"particle minecraft:flash ~ ~2 ~ 0.2 0.2 0.2 0 1 force");
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 30);
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(PigBasemodModItems.RIFLE.get(), 50);
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("ammo",
 					((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("ammo") - 1));
 			if (world instanceof Level _level) {
