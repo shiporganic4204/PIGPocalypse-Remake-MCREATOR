@@ -12,6 +12,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ArmorItem;
 
 import net.mcreator.pigbasemod.item.SwordSharpItem;
 import net.mcreator.pigbasemod.item.SwordBaseItem;
@@ -23,6 +24,7 @@ import net.mcreator.pigbasemod.item.IndusiumItem;
 import net.mcreator.pigbasemod.item.GreenPorkchopItem;
 import net.mcreator.pigbasemod.item.FossilItem;
 import net.mcreator.pigbasemod.item.CircuitItem;
+import net.mcreator.pigbasemod.item.BhelmetItem;
 import net.mcreator.pigbasemod.block.display.InfectionCoreDisplayItem;
 import net.mcreator.pigbasemod.PigBasemodMod;
 
@@ -54,6 +56,7 @@ public class PigBasemodModItems {
 	public static final RegistryObject<Item> ANTI_AIR_PROTOTYPE = block(PigBasemodModBlocks.ANTI_AIR_PROTOTYPE);
 	public static final RegistryObject<Item> RIFLE = REGISTRY.register("rifle", () -> new Rifle1Item());
 	public static final RegistryObject<Item> RIFLEBOLT = REGISTRY.register("riflebolt", () -> new Rifle2Item());
+	public static final RegistryObject<BhelmetItem> BHELMET_HELMET = REGISTRY.register("bhelmet_helmet", () -> new BhelmetItem(ArmorItem.Type.HELMET, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

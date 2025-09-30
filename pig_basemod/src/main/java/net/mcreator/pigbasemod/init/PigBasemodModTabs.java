@@ -53,6 +53,7 @@ public class PigBasemodModTabs {
 				tabData.accept(PigBasemodModBlocks.ANTI_AIR_PROTOTYPE.get().asItem());
 				tabData.accept(PigBasemodModItems.RIFLE.get());
 				tabData.accept(PigBasemodModItems.RIFLEBOLT.get());
+				tabData.accept(PigBasemodModItems.BHELMET_HELMET.get());
 			}).withTabsBefore(PIGBLOCKS.getId()).build());
 	public static final RegistryObject<CreativeModeTab> PIG_ITEMS = REGISTRY.register("pig_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pig_basemod.pig_items")).icon(() -> new ItemStack(Items.COOKED_PORKCHOP)).displayItems((parameters, tabData) -> {

@@ -1038,7 +1038,8 @@
           "src/main/java/net/mcreator/pigbasemod/item/renderer/Rifle1ItemRenderer.java",
           "src/main/java/net/mcreator/pigbasemod/item/model/Rifle1ItemModel.java"
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle1Rightclicked",
@@ -1072,7 +1073,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle1ItemInHandTick",
@@ -1090,7 +1092,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle1EntitySwingsItem",
@@ -1108,7 +1111,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle1ItemInInventoryTick",
@@ -1126,7 +1130,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle2rightclicked",
@@ -1160,7 +1165,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle2ItemInHand",
@@ -1178,7 +1184,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle2EntitySwings",
@@ -1196,7 +1203,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle2ItemInInv",
@@ -1214,7 +1222,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
     },
     {
       "name": "Rifle2",
@@ -1229,7 +1238,43 @@
           "src/main/java/net/mcreator/pigbasemod/item/Rifle2Item.java",
           "src/main/java/net/mcreator/pigbasemod/item/renderer/Rifle2ItemRenderer.java"
         ]
-      }
+      },
+      "path": "~/Warfare part 1"
+    },
+    {
+      "name": "Bhelmet",
+      "type": "animatedarmor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bhelmet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/item/model/BhelmetModel.java",
+          "src/main/java/net/mcreator/pigbasemod/item/BhelmetItem.java",
+          "src/main/java/net/mcreator/pigbasemod/client/renderer/BhelmetArmorRenderer.java",
+          "src/main/resources/assets/pig_basemod/models/item/bhelmet_helmet.json"
+        ]
+      },
+      "path": "~/Warfare part 1"
+    },
+    {
+      "name": "Equip1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equip_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/pigbasemod/procedures/Equip1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Warfare part 1"
     }
   ],
   "variable_elements": [],
@@ -1309,6 +1354,7 @@
       "block.pig_basemod.danchi_block": "Danchi Block",
       "subtitles.minionhurt": "",
       "block.pig_basemod.danchi_stairs": "Danchi stairs",
+      "item.pig_basemod.bhelmet_helmet": "Bulletproof Helmet",
       "item.pig_basemod.green_porkchop": "Green Porkchop",
       "entity.pig_basemod.minion": "Pig_Minion",
       "block.pig_basemod.infected_grass": "Infected Grass",
@@ -1322,6 +1368,7 @@
       "block.pig_basemod.platinum_ore": "Platinum Ore",
       "effect.pig_basemod.green_infection": "Green Infection",
       "item.pig_basemod.triplane_spawn_egg": "Triplane Spawn Egg",
+      "item.pig_basemod.bhelmet_leggings": "Bhelmet Leggings",
       "item_group.pig_basemod.pig_items": "P!G_Items",
       "block.pig_basemod.anti_air_prototype": "Anti Air Prototype",
       "item.pig_basemod.sword_sharp": "Sword Sharp",
@@ -1336,10 +1383,12 @@
       "item.pig_basemod.sharp_blade": "Sharp blade",
       "item_group.pig_basemod.pig_resources": "P!G_Resources",
       "item.pig_basemod.fossil": "Fossil",
+      "item.pig_basemod.bhelmet_chestplate": "Bhelmet Chestplate",
       "item.pig_basemod.indusium": "Indusium",
       "item.pig_basemod.minion_spawn_egg": "Pig_Minion Spawn Egg",
       "subtitles.bzdin": "bzdin",
       "item.pig_basemod.platinum": "Platinum",
+      "item.pig_basemod.bhelmet_boots": "Bhelmet Boots",
       "block.pig_basemod.danchi_slab": "Danchi slab",
       "block.pig_basemod.infected_log": "Infected Block",
       "subtitles.minionambient": "",
@@ -1409,6 +1458,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Warfare part 1",
+        "children": []
       }
     ]
   },
