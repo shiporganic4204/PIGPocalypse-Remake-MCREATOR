@@ -60,7 +60,7 @@
     "material": {
       "value": "NONE"
     },
-    "tickRate": 40,
+    "tickRate": 600,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -122,6 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "InfectionCoreOnTickUpdate"
+    },
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

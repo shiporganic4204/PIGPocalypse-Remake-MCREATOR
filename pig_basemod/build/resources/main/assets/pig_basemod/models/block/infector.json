@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "pig_basemod:block/inf1g2",
-    "up": "pig_basemod:block/infector3",
-    "north": "pig_basemod:block/inf1g",
-    "east": "pig_basemod:block/inf1g",
-    "south": "pig_basemod:block/inf1g",
-    "west": "pig_basemod:block/inf1g",
-    "particle": "pig_basemod:block/inf1g2"
+    "down": "pig_basemod:block/allahgrass",
+    "up": "pig_basemod:block/zabil",
+    "north": "pig_basemod:block/allahgrass",
+    "east": "pig_basemod:block/allahgrass",
+    "south": "pig_basemod:block/allahgrass",
+    "west": "pig_basemod:block/allahgrass",
+    "particle": "pig_basemod:block/allahgrass"
   },
   "render_type": "solid"
 }

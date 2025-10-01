@@ -37,7 +37,7 @@ entityDistanceScaling:5.0
 guiScale:3
 particles:0
 maxFps:140
-graphicsMode:1
+graphicsMode:2
 ao:false
 prioritizeChunkUpdates:0
 biomeBlendRadius:2

@@ -75,19 +75,36 @@ public class InfectorOnTickUpdateProcedure {
 					}
 				}
 			}
-			{
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState();
-				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
-						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-						} catch (Exception e) {
-						}
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:leaves")))) {
+				{
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockState _bs = PigBasemodModBlocks.INFECTED_LEAVES.get().defaultBlockState();
+					BlockState _bso = world.getBlockState(_bp);
+					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+						if (_property != null && _bs.getValue(_property) != null)
+							try {
+								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							} catch (Exception e) {
+							}
+					}
+					world.setBlock(_bp, _bs, 3);
 				}
-				world.setBlock(_bp, _bs, 3);
+			} else {
+				{
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockState _bs = PigBasemodModBlocks.INFECTED_BLOCK.get().defaultBlockState();
+					BlockState _bso = world.getBlockState(_bp);
+					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+						if (_property != null && _bs.getValue(_property) != null)
+							try {
+								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							} catch (Exception e) {
+							}
+					}
+					world.setBlock(_bp, _bs, 3);
+				}
 			}
 		} else {
 			if (!world.isClientSide()) {
